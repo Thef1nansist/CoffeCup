@@ -1,0 +1,93 @@
+﻿<Window x:Class="DesktopApp.Views.Dashboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DesktopApp.Views"
+        xmlns:materialDesign ="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Dashboard" AllowsTransparency="True"    Height="600" Width="1000" ResizeMode="NoResize" WindowStyle="None">
+    <Grid Background="#FFEEEEEE"   >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*" />
+            <RowDefinition Height="23*" />
+            <RowDefinition Height="92*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid x:Name="FooterMenu" Grid.Column="1" Grid.ColumnSpan="3" Height="30" Background="#FF222222" VerticalAlignment="Center" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+            <Button x:Name="ButtonMenu" HorizontalAlignment="Left" VerticalAlignment="Top" Width="38" Height="26"  Padding="0" Margin="250,5,0,0"   Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <Image HorizontalAlignment="Right" Height="16" Margin="0,5,12,0" VerticalAlignment="Top" Width="16" Source="D:\KursachCoffeCup\CoffeeCup\DesktopApp\Resurses\circle-64.ico" MouseDown="Image_MouseDown" Cursor="Arrow"/>
+            <Image x:Name="cryl1" HorizontalAlignment="Right"  Height="16" Margin="0,5,33,0" VerticalAlignment="Top" Width="16" Source="D:\KursachCoffeCup\CoffeeCup\DesktopApp\Resurses\circle-64 (1).ico" />
+            <Image x:Name="cryl2" HorizontalAlignment="Right"  Height="16" Margin="0,5,33,0" VerticalAlignment="Top" Width="16" Source="D:\KursachCoffeCup\CoffeeCup\DesktopApp\Resurses\circle-64 (1).ico" />
+            <Image  Height="16"  HorizontalAlignment="Right" Margin="0,5,54,0" VerticalAlignment="Top" Width="16" Source="D:\KursachCoffeCup\CoffeeCup\DesktopApp\Resurses\circle-64 (2).ico" MouseDown="Image_MouseDown_2"/>
+            <materialDesign:PackIcon Kind="Menu" Foreground="White" Width="33" Height="28"   MouseLeftButtonDown="PackIcon_MouseLeftButtonDown" HorizontalAlignment="Left" />
+        </Grid>
+        
+        <StackPanel ScrollViewer.HorizontalScrollBarVisibility="Disabled"  x:Name="GridMenu" Width="250" HorizontalAlignment="Center"  Margin="0,0,0,-2" Grid.RowSpan="3" Background="#FF222222"   >
+            <Image Height="142" Source="D:\KursachCoffeCup\CoffeeCup\DesktopApp\Resurses\CoffeeCupLogo10.png" RenderTransformOrigin="0.414,0.507" Stretch="Fill" Grid.Column="0" Grid.Row="0" />
+            <ListView  ScrollViewer.HorizontalScrollBarVisibility="Disabled" Background="#FF222222" FontFamily="Champagne &amp; Limousines" FontSize="18" BorderBrush="#FF222222" Height="460"  >
+                <ListViewItem Height="45" Padding="0"   Background="#FF222222"   >
+                    <StackPanel x:Name="StackPanelBlock"  Orientation="Horizontal" MouseLeftButtonDown ="ListViewItem_MouseLeftButtonDown" Width="250" >
+                        <materialDesign:PackIcon  Kind="Coffee"  Width="20" Height="20"   Foreground="White" Margin="14 0 4 0" VerticalAlignment="Center"/>
+                        <TextBlock Text="Кофейни" Margin="10" Foreground="White" />
+
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Height="45" Padding="0" Background="#FF222222">
+                    <StackPanel Orientation="Horizontal" Width="250">
+                        <materialDesign:PackIcon Kind="GpsFixed" Width="20" Height="20" Foreground="White" Margin="14 0 4 0" VerticalAlignment="Center"/>
+                        <TextBlock Text="Карта" Foreground="White" Margin="10"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Height="45" Padding="0"  Background="#FF222222" >
+                    <StackPanel Orientation="Horizontal" MouseLeftButtonDown="ListViewItem_MouseLeftButtonDown_1" Width="250">
+                        <materialDesign:PackIcon Kind="Star" Width="20" Height="20" Foreground="White"  Margin="14 0 4 0" VerticalAlignment="Center"/>
+                        <TextBlock Text="Популярное" Foreground="White" Margin="10"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Height="45" Padding="0"  Background="#FF222222">
+                    <StackPanel Orientation="Horizontal" Width="250">
+                        <materialDesign:PackIcon Kind="Graph" Width="20" Height="20" Foreground="White"  Margin="14 0 4 0" VerticalAlignment="Center"/>
+                        <TextBlock Text="Статистика" Foreground="White" Margin="10"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Height="45" Padding="0"  Background="#FF222222">
+                    <StackPanel Orientation="Horizontal" Width="250">
+                        <materialDesign:PackIcon Kind="Basket" Width="20" Height="20" Foreground="White"  Margin="14 0 4 0" VerticalAlignment="Center"/>
+                        <TextBlock Text="Мои Заказы" Foreground="White" Margin="10"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Height="45" Padding="0"  Background="#FF222222" >
+                    <StackPanel Orientation="Horizontal" MouseLeftButtonDown="ListViewItem_MouseLeftButtonDown_2" Width="250">
+                        <materialDesign:PackIcon Kind="FolderFavorite" Width="20" Height="20" Foreground="White"  Margin="14 0 4 0" VerticalAlignment="Center"/>
+                        <TextBlock Text="Избранное" Foreground="White" Margin="10"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem x:Name="btAbout" Height="118" Padding="0" Background="#FF222222"  VerticalContentAlignment="Bottom" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" UseLayoutRounding="False" RenderTransformOrigin="0.504,0.58" Margin="0,72,0,0" >
+                    <StackPanel Orientation="Horizontal" Width="250">
+                        <materialDesign:PackIcon  Kind="ApplicationSettings" Width="20" Height="20"  Foreground="White"  Margin="14 0 4 0" VerticalAlignment="Center"/>
+                        <TextBlock Text="About"  Foreground="White" Margin="10"/>
+                    </StackPanel>
+                </ListViewItem>
+            </ListView>
+        </StackPanel>
+
+
+        <Grid HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="3"  Height="569" VerticalAlignment="Top" Width="749">
+            <Frame  Name="MainFrame" HorizontalAlignment="Left" Height="569" Margin="-1,0,0,0" VerticalAlignment="Top" Width="750"/>
+
+        </Grid>
+
+
+        <!--<Button Content="Кофейни" HorizontalAlignment="Center" VerticalAlignment="Center" Height="72" Width="200" Click="Button_Click"/>
+        <Button Content="Избранные кофейни" HorizontalAlignment="Center" VerticalAlignment="Center" Height="72" Width="200" Grid.Column="1" Click="Button_Click_2"/>
+        <Button Content="Создать кофейню" HorizontalAlignment="Center" VerticalAlignment="Center" Height="72" Width="200" Grid.Column="3" Grid.Row="5" Click="Button_Click_1"/>
+        <Button Content="Популярные кофейни" HorizontalAlignment="Center" VerticalAlignment="Center" Height="72" Width="200" Grid.Column="2" Click="Button_Click_3"/>-->
+    </Grid>
+</Window>

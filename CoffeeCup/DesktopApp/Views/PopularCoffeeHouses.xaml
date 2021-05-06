@@ -1,0 +1,30 @@
+﻿<Window x:Class="DesktopApp.Views.PopularCoffeeHouses"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DesktopApp.Views"
+        mc:Ignorable="d"
+        Title="PopularCoffeeHouses" Height="450" Width="800">
+    <Grid Initialized="GetPopularCoffeeHouses" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="0.8*" />
+        </Grid.ColumnDefinitions>
+
+        <ListBox x:Name="listOfPopularCoffeeHouses" ItemsSource="{Binding CoffeeHouses}"
+                  Grid.ColumnSpan="2">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="5">
+                        <TextBlock FontSize="14" Text="{Binding Path=Name}" />
+                        <TextBlock Text="{Binding Path=Address}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        
+
+    </Grid>
+</Window>
