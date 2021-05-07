@@ -42,16 +42,21 @@ namespace BusinessLogic.Services
         {
             var userDA = _mapper.Map<DA.AppUser>(user);
             var existUser = await _userManager.FindByNameAsync(user?.UserName).ConfigureAwait(false);
-            var result = await _userManager.CreateAsync(userDA, password).ConfigureAwait(false);
-            if (result.Succeeded)
+            IdentityResult result = null;
+
+            if (existUser == null)
             {
-                await _userManager.AddClaimsAsync(userDA, new List<Claim>
+                result = await _userManager.CreateAsync(userDA, password).ConfigureAwait(false);
+                if (result.Succeeded)
+                {
+                    await _userManager.AddClaimsAsync(userDA, new List<Claim>
                 {
                     new Claim(JwtRegisteredClaimNames.UniqueName, userDA?.UserName),
                     new Claim(JwtRegisteredClaimNames.Sub, userDA?.Id)
                 }).ConfigureAwait(false);
+                }
+              
             }
-            flag = userDA != existUser && result.Succeeded ? true : false;
             
             return result;
         }
@@ -97,10 +102,11 @@ namespace BusinessLogic.Services
             return _mapper.Map<AppUser>(result);
 
         }
-        public async Task<(string, string)> LoginAsync(AppUser user, string password)
+        public async Task<(string, string, bool)> LoginAsync(AppUser user, string password)
         {
             //find user
             var existUser = await _userManager.FindByNameAsync(user?.UserName).ConfigureAwait(false);
+
             //check pair user - password
             var checkUserPassword = await _userManager.CheckPasswordAsync(existUser, password).ConfigureAwait(false);
             if (existUser != null && checkUserPassword == true)
@@ -108,9 +114,11 @@ namespace BusinessLogic.Services
                 //generates user claims
                 var claims = await _userManager.GetClaimsAsync(existUser).ConfigureAwait(false);
                 //create JWT
-                return (CreateToken(claims), existUser.Id);
+                
+
+                return (CreateToken(claims), existUser.Id, existUser.IsAdmin);
             }
-            return (null, null);
+            return (null, null, false);
         }
         public async Task<IEnumerable<AppUser>> Get()
         {

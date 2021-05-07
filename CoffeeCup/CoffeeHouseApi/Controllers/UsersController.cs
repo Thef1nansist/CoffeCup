@@ -49,11 +49,12 @@ namespace CoffeeHouseApi.Controllers
             try
             {
                 var result = await _userService.CreateAsync(user, user?.Password).ConfigureAwait(false);
+                
+                if (result != null) return Ok(true);
 
-                if (result.Succeeded) return Ok(true);
-
-                return BadRequest(result.Errors.FirstOrDefault().Description);
+                return BadRequest();
             }
+            //result.Errors.FirstOrDefault().Description
             catch (Exception e)
             {
                 return BadRequest(e);
@@ -65,7 +66,7 @@ namespace CoffeeHouseApi.Controllers
             try
             {
                 var loginUser = await _userService.LoginAsync(user, user?.Password).ConfigureAwait(false);
-                return CreatedAtAction(nameof(Login), new { access_token = loginUser.Item1, userId = loginUser.Item2 });
+                return CreatedAtAction(nameof(Login), new { access_token = loginUser.Item1, userId = loginUser.Item2, isAdmin = loginUser.Item3 });
             }
             catch (Exception e)
             {

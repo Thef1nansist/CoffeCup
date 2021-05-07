@@ -85,10 +85,12 @@ D:\KursachCoffeCup\CoffeeCup\DesktopApp\bin\Debug\net5.0-windows\System.Memory.D
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\DesktopApp.csprojAssemblyReference.cache
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\MainWindow.g.cs
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\AddCoffeeHouse.g.cs
+D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\CoffeeHouseMainWindow.g.cs
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\CoffeeHouses.g.cs
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\Dashboard.g.cs
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\FavoriteCoffeeHouses.g.cs
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\PopularCoffeeHouses.g.cs
+D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\RegWindowCoffeeHouse.g.cs
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\App.g.cs
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\DesktopApp_Content.g.cs
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\DesktopApp_MarkupCompile.cache
@@ -96,10 +98,12 @@ D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\DesktopApp_Mark
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\App.baml
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\MainWindow.baml
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\AddCoffeeHouse.baml
+D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\CoffeeHouseMainWindow.baml
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\CoffeeHouses.baml
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\Dashboard.baml
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\FavoriteCoffeeHouses.baml
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\PopularCoffeeHouses.baml
+D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\RegWindowCoffeeHouse.baml
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\DesktopApp.g.resources
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\DesktopApp.GeneratedMSBuildEditorConfig.editorconfig
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\DesktopApp.AssemblyInfoInputs.cache
@@ -110,5 +114,3 @@ D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\DesktopApp.dll
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\ref\DesktopApp.dll
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\DesktopApp.pdb
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\DesktopApp.genruntimeconfig.cache
-D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\RegWindowCoffeeHouse.g.cs
-D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\RegWindowCoffeeHouse.baml

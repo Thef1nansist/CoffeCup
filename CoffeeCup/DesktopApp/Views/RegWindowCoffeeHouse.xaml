@@ -30,7 +30,7 @@
         <!--#region textbox fields-->
         <TextBox x:Name="UserName" FontSize="15" materialDesign:HintAssist.Hint=" Логин" Padding="0 " Style="{StaticResource MaterialDesignFloatingHintTextBox}" Foreground="White" Margin="14,0,19,22" Grid.Row="3"  />
         <TextBox x:Name="Password" FontSize="15" materialDesign:HintAssist.Hint=" Пароль" Padding="0 " Style="{StaticResource MaterialDesignFloatingHintTextBox}" Foreground="White" Margin="14,0,4,115" Grid.Row="4" />
-        <CheckBox Content="Являетесь предприятием?" HorizontalAlignment="Left" Margin="14,59,0,0" Foreground="White" Grid.Row="4" VerticalAlignment="Top" Width="168" Height="18"/>
+        <CheckBox x:Name="CheckBox1" Content="Являетесь предприятием?" HorizontalAlignment="Left" Margin="14,59,0,0" Foreground="White" Grid.Row="4" VerticalAlignment="Top" Width="168" Height="18"/>
         <!--#endregion-->
         
         <!--#region Buttons reg/aut-->

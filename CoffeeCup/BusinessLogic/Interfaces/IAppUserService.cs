@@ -13,7 +13,7 @@ namespace BusinessLogic.Interfaces
         string CreateToken(IEnumerable<Claim> claims);
         Task<AppUser> FindByIdAsync(string currentUserId);
         Task<AppUser> FindByNameAsync(string userName);
-        Task<(string, string)> LoginAsync(AppUser user, string password);
+        Task<(string, string, bool)> LoginAsync(AppUser user, string password);
         Task<IEnumerable<AppUser>> Get();
 
     }

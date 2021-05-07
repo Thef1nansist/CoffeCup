@@ -9,11 +9,11 @@ namespace DesktopApp.Interfaces
     {
         public string JWT { get; set; }
         public string UserId { get; set; }
-        Task CreateAsync(string userName, string password);
+        Task<bool> CreateAsync(string userName, string password, bool checkbox);
 
         public bool GetFlag();
 
         Task<IEnumerable<AppUser>> GetAsync();
-        Task<bool> LoginAsync(string text, string password);
+        Task<(bool, bool)> LoginAsync(string text, string password);
     }
 }

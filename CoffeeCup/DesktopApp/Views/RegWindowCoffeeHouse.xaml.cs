@@ -47,25 +47,25 @@ namespace DesktopApp.Views
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            bool flag = true;
+            
             if (UserName.Text == "" || Password.Text == "")
             {
                 MessageBox.Show("Некорректное значение полей");
                 return;
             }
-            var users = await _userService.GetAsync();
-            foreach (var a in users)
+
+            var asd = await _userService.CreateAsync(UserName.Text, Password.Text, CheckBox1.IsChecked.Value).ConfigureAwait(false);
+            if (asd)
             {
-                flag = UserName.Text == a.UserName ? true : false;
-                if (flag)
-                {
-                    MessageBox.Show("Данный логин уже занят");
-                    return;
-                }
-                
+                MessageBox.Show("Аккаунт создан!");
             }
-            await _userService.CreateAsync(UserName.Text, Password.Text).ConfigureAwait(false);
-            MessageBox.Show("Аккаунт создан!");
+            else
+            {
+                MessageBox.Show("Данный логин уже занят");
+            }
+
+
+            //
         }
 
         private void Label_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

@@ -10,6 +10,9 @@
     <Compile Update="Views\AddCoffeeHouse.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\CoffeeHouseMainWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\CoffeeHouses.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -31,6 +34,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\AddCoffeeHouse.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\CoffeeHouseMainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\CoffeeHouses.xaml">

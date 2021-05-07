@@ -16,24 +16,26 @@ namespace DesktopApp.Services
         private readonly IHttpClientFactory _httpClientFactory;
         public string JWT { get; set; }
         public string UserId { get; set; }
+        
+        public bool IsAdmin { get; set; }
 
         public AppUserService(IHttpClientFactory httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;
         }
 
-        public async Task CreateAsync(string userName, string password)
+        public async Task<bool> CreateAsync(string userName, string password, bool checkbox)
         {
             var request = new HttpRequestMessage(HttpMethod.Post, "/api/users");
 
-            var user = JsonSerializer.Serialize(new AppUser() { UserName = userName, Password = password });
+            var user = JsonSerializer.Serialize(new AppUser() { UserName = userName, Password = password, IsAdmin = checkbox });
 
             request.Content = new StringContent(user, Encoding.UTF8, "application/json");
 
             using var client = _httpClientFactory.CreateClient("CoffeeHouseApi");
 
             var response = await client.SendAsync(request);
-
+            return response.StatusCode == System.Net.HttpStatusCode.OK;
            
         }
 
@@ -55,7 +57,7 @@ namespace DesktopApp.Services
             return res;           
         }
 
-        public async Task<bool> LoginAsync(string text, string password)
+        public async Task<(bool, bool)> LoginAsync(string text, string password)
         {
             using var client = _httpClientFactory.CreateClient("CoffeeHouseApi");
 
@@ -64,10 +66,13 @@ namespace DesktopApp.Services
             var responseStream = await response.Content.ReadAsStringAsync();
             
             JWT = JsonSerializerExtensions
-                .DeserializeAnonymousType(responseStream, new { access_token = "", userId = "" }).access_token;
+                .DeserializeAnonymousType(responseStream, new { access_token = "", userId = "", isAdmin = false }).access_token;
             UserId = JsonSerializerExtensions
-                .DeserializeAnonymousType(responseStream, new { access_token = "", userId = "" }).userId;
-            return JWT != null;
+                .DeserializeAnonymousType(responseStream, new { access_token = "", userId = "", isAdmin = false }).userId;
+            IsAdmin = JsonSerializerExtensions
+                .DeserializeAnonymousType(responseStream, new { access_token = "", userId = "", isAdmin = false }).isAdmin;
+
+            return (JWT != null, IsAdmin);
         }
 
         public bool GetFlag()

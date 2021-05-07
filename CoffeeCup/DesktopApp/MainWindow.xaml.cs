@@ -70,11 +70,21 @@ namespace DesktopApp
         private async void Button_Click_1(object sender, RoutedEventArgs e)
         {
             var result = await _userService.LoginAsync(UserName.Text, Password.Password);
-            if (result)
+
+            if (result.Item1)
             {
-                var dashboard = new Dashboard(_coffeeHouseService,_userService, _favoriteService);
-                dashboard.Show();
-                this.Close();
+                if (result.Item2)
+                {
+                    var coffehousemw = new CoffeeHouseMainWindow(_coffeeHouseService, _userService, _favoriteService);
+                    coffehousemw.Show();
+                    this.Close();
+                }
+                else
+                {
+                    var dashboard = new Dashboard(_coffeeHouseService, _userService, _favoriteService);
+                    dashboard.Show();
+                    this.Close();
+                }
             } else
             {
                 MessageBox.Show("Неверный логин/пароль");
