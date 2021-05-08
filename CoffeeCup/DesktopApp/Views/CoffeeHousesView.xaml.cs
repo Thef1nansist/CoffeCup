@@ -14,27 +14,28 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace DesktopApp.Views
 {
     /// <summary>
-    /// Interaction logic for CoffeeHouses.xaml
+    /// Логика взаимодействия для CoffeeHousesView.xaml
     /// </summary>
-    public partial class CoffeeHouses : Window
+    public partial class CoffeeHousesView : Page
     {
         private readonly ICoffeeHouseService _coffeeHouseService;
         private readonly IAppUserService _appUserService;
         private readonly IFavoriteService _favoriteService;
-        public CoffeeHouses(ICoffeeHouseService coffeeHouseService, IAppUserService appUserService, IFavoriteService favoriteService)
+        public CoffeeHousesView(ICoffeeHouseService coffeeHouseService, IAppUserService appUserService, IFavoriteService favoriteService)
         {
             _coffeeHouseService = coffeeHouseService;
             _appUserService = appUserService;
             _favoriteService = favoriteService;
-
             InitializeComponent();
             DataContext = new CoffeeHouseViewModel();
         }
+
         private async void GetCoffeeHouses(object sender, System.EventArgs e)
         {
             var coffeeHouses = await _coffeeHouseService.GetAsync();

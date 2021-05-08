@@ -13,7 +13,7 @@
     <Compile Update="Views\CoffeeHouseMainWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\CoffeeHouses.xaml.cs">
+    <Compile Update="Views\CoffeeHousesView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\Dashboard.xaml.cs">
@@ -39,7 +39,7 @@
     <Page Update="Views\CoffeeHouseMainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\CoffeeHouses.xaml">
+    <Page Update="Views\CoffeeHousesView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Dashboard.xaml">

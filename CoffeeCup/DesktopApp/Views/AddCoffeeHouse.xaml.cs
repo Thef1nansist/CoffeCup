@@ -11,14 +11,15 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace DesktopApp.Views
 {
     /// <summary>
-    /// Interaction logic for AddCoffeeHouse.xaml
+    /// Логика взаимодействия для AddCoffeeHouse.xaml
     /// </summary>
-    public partial class AddCoffeeHouse : Window
+    public partial class AddCoffeeHouse : Page
     {
         private readonly ICoffeeHouseService _coffeeHouseService;
         public AddCoffeeHouse(ICoffeeHouseService coffeeHouseService)
@@ -54,13 +55,26 @@ namespace DesktopApp.Views
                     {
                         Name = CoffeeItem_4.Text,
                         Price = Decimal.Parse(Price_CoffeeItem_4.Text)
+                    },
+                    new Models.CoffeeItem()
+                    {
+                        Name = CoffeeItem_4_Copy2.Text,
+                        Price = Decimal.Parse(Price_CoffeeItem_4_Copy2.Text)
+                    },
+                    new Models.CoffeeItem()
+                    {
+                        Name = CoffeeItem_4_Copy3.Text,
+                        Price = Decimal.Parse(Price_CoffeeItem_4_Copy3.Text)
                     }
+
                 }
-            });
-            this.Close();
+            }); ;
+            MessageBox.Show("Готово");
+            
+            this.Content = null;
         }
 
-        private void CoffeeItem_1_Copy_TextChanged(object sender, TextChangedEventArgs e)
+        private void CoffeeItem_2_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }

@@ -37,17 +37,17 @@ namespace DesktopApp.Views
 
       
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            var addPage = new AddCoffeeHouse(_coffeeHouseService);
-            addPage.Show();
-        }
+        //private void Button_Click_1(object sender, RoutedEventArgs e)
+        //{
+        //    var addPage = new AddCoffeeHouse(_coffeeHouseService);
+        //    addPage.Show();
+        //}
      
 
         private void ListViewItem_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            var coffeeHousesPage = new CoffeeHouses(_coffeeHouseService, _appUserService, _favoriteService);
-            coffeeHousesPage.Show();
+            CoffeeHousesView coffeeHouses = new CoffeeHousesView(_coffeeHouseService, _appUserService, _favoriteService);
+          LoadWindowNew(coffeeHouses);
         }
 
         private void ListViewItem_MouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
@@ -134,5 +134,6 @@ namespace DesktopApp.Views
             this.DragMove();
 
         }
+      
     }
 }

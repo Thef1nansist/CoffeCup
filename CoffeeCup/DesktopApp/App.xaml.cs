@@ -54,7 +54,7 @@ namespace DesktopApp
             services.AddSingleton(typeof(IConfiguration), _configuration);
 
             services.AddSingleton(typeof(MainWindow));
-            services.AddSingleton(typeof(CoffeeHouses));
+            services.AddSingleton(typeof(CoffeeHousesView));
         }
     }
 }

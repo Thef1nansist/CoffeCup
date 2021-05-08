@@ -5,8 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DesktopApp.Views"
         mc:Ignorable="d"
-        Title="CoffeeHouseMainWindow" Height="450" Width="800">
+        Title="CoffeeHouseMainWindow"   AllowsTransparency="True"    Height="600" Width="1000" ResizeMode="NoResize"  UseLayoutRounding="False" VerticalContentAlignment="Center" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" VerticalAlignment="Center" HorizontalAlignment="Center" WindowStyle="None" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+    <Window.Background>
+        <ImageBrush ImageSource="D:\KursachCoffeCup\CoffeeCup\DesktopApp\Resurses\coffe.png"/>
+    </Window.Background>
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*" />
+            <RowDefinition Height="83*" />
+            <RowDefinition Height="31*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="19*" />
+            <ColumnDefinition Width="31*" />
+            <ColumnDefinition Width="25*" />
+            <ColumnDefinition Width="25*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" >
+            <Button  x:Name="MyCofebt" Content="Мои кофейни" FontStyle="Italic"  BorderThickness="20, 20, 20, 20 " Height="45" Width="130" Background="#FFAA9584" Margin="35,110,0,0"  BorderBrush="#FFAA9584"/>
+            <Button x:Name="Statisticbt" Content="Статистика" FontStyle="Italic"  BorderThickness="20, 20, 20, 20 " HorizontalAlignment="Left" Height="45" Margin="48,20,0,0" VerticalAlignment="Top" Width="130" Background="#FFAA9584" BorderBrush="#FFAA9584"/>
+            <Button x:Name="Popularbt" Content="Рейтинг" FontStyle="Italic"  BorderThickness="20, 20, 20, 20 " Height="45" Width="130" Background="#FFAA9584" Margin="35,20,0,0"  BorderBrush="#FFAA9584" Click="Popularbt_Click" />
+        </StackPanel>
+        <Ellipse x:Name="AddCoffeeHouses" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Height="70" Margin="70,25,0,0" Stroke="#FFFFFDFD" VerticalAlignment="Top" Width="75" MouseDown="AddCoffeeHouses_MouseDown">
+            <Ellipse.Fill>
+                <ImageBrush  ImageSource="D:\KursachCoffeCup\CoffeeCup\DesktopApp\Resurses\iconfinder_Add_plus_2629903.png" Stretch="UniformToFill"/>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Frame Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="2" Content="" Name="NewAddCompany" HorizontalAlignment="Left" Height="570" VerticalAlignment="Top" Width="810"/>
     </Grid>
 </Window>
