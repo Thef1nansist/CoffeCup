@@ -70,7 +70,7 @@
                     </StackPanel>
                 </ListViewItem>
                 <ListViewItem x:Name="btAbout" Height="118" Padding="0" Background="#FF222222"  VerticalContentAlignment="Bottom" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" UseLayoutRounding="False" RenderTransformOrigin="0.504,0.58" Margin="0,72,0,0" >
-                    <StackPanel Orientation="Horizontal" Width="250">
+                    <StackPanel Orientation="Horizontal" Width="250" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown">
                         <materialDesign:PackIcon  Kind="ApplicationSettings" Width="20" Height="20"  Foreground="White"  Margin="14 0 4 0" VerticalAlignment="Center"/>
                         <TextBlock Text="About"  Foreground="White" Margin="10"/>
                     </StackPanel>
