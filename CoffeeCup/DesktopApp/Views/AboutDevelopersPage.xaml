@@ -1,0 +1,99 @@
+﻿<Page x:Class="DesktopApp.Views.AboutDevelopersPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+   
+        xmlns:materialDesign ="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:DesktopApp.Views"
+        mc:Ignorable="d"
+        Title="AboutDevelopersPage" Height="420" Width="730" >
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="38*"/>
+        </Grid.ColumnDefinitions>
+        <Image  Source="D:\KursachCoffeCup\CoffeeCup\DesktopApp\Resurses\me.jpg"
+      Stretch="Uniform" Margin="468,0,0,195" Grid.Column="2" />
+        <Grid Grid.Column="2" HorizontalAlignment="Left" Height="170" Margin="460,250,0,0" VerticalAlignment="Top" Width="234">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="0*"/>
+            </Grid.RowDefinitions>
+            <Label Content="Информация о разработчике" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="185"/>
+            <Label Content="Почта: vladsavchenko994@gmail.com" HorizontalAlignment="Center" Height="26" VerticalAlignment="Top" Width="234" Margin="0,30,0,0"/>
+            <Label Content="Телефон: +375296288638" HorizontalAlignment="Center" Height="24" VerticalAlignment="Center" Width="234"/>
+            <Label Content="Студент БГТУ, 2 курс" HorizontalAlignment="Center" Height="26" VerticalAlignment="Top" Width="234" Margin="0,50,0,0"/>
+            <Label Content="Специальность: ПОИТ" HorizontalAlignment="Center" Height="25" Margin="0,98,0,0" VerticalAlignment="Top" Width="234"/>
+            <Label Content="Возраст: 20 лет" HorizontalAlignment="Center" Height="25" Margin="0,123,0,0" VerticalAlignment="Top" Width="234"/>
+            <Label Content="Семейное положение: свободен)" HorizontalAlignment="Center" Height="25" Margin="0,145,0,0" VerticalAlignment="Top" Width="234"/>
+        </Grid>
+
+        <materialDesign:Card
+  Background="{DynamicResource MaterialDesignBackground}" Grid.ColumnSpan="3" Margin="-15,210,234,0">
+            <StackPanel Margin="0,-10,0,-45">
+                <Expander
+      HorizontalAlignment="Stretch"
+      Header="Для обычных пользователей">
+                    <StackPanel
+        Orientation="Vertical"
+        TextBlock.Foreground="{DynamicResource MaterialDesignBody}"
+        Margin="24,8,24,16">
+                        <TextBlock
+          Text="Для чего вам это приложение" />
+                        <TextBlock
+          Opacity=".68"
+          Text="С помощью данного приложения вы будете экономить на кофе. Это работает так, вы приходите в кофейню заказать кофе, активируете купон на скидку в нашем приложении и всё, получаете свою скидку."
+          TextWrapping="Wrap" />
+                    </StackPanel>
+                </Expander>
+                <Border
+      Background="{DynamicResource MaterialDesignDivider}"
+      Height="1"
+      HorizontalAlignment="Stretch"
+      SnapsToDevicePixels="True" />
+                <Expander
+      HorizontalAlignment="Stretch"
+      Header="Для компаний">
+                    <StackPanel
+        Orientation="Vertical"
+        TextBlock.Foreground="{DynamicResource MaterialDesignBody}"
+        Margin="24,8,24,16">
+                        <TextBlock
+          Text="Почему компании делают скидку из-за нашего приложения" />
+                        <TextBlock
+          Opacity=".68"
+          Text="Наше приложение даёт возможность комании разместить свою рекламу совершенно беспалатно, но пользователи, которые покупают у них кофе с нашим приложением получают скидку, всё просто."
+          TextWrapping="Wrap" />
+                    </StackPanel>
+                </Expander>
+                <Border
+      Background="{DynamicResource MaterialDesignDivider}"
+      Height="1"
+      HorizontalAlignment="Stretch"
+      SnapsToDevicePixels="True" />
+                <Expander
+      HorizontalAlignment="Stretch"
+      Header="Статистика">
+                    <StackPanel
+        Orientation="Vertical"
+        TextBlock.Foreground="{DynamicResource MaterialDesignBody}"
+        Margin="24,8,24,16">
+                        <TextBlock
+          Text="Почему стоит пользоваться нашим приложением" />
+                        <TextBlock
+          Opacity=".68"
+          Text="В среденем человек пьёт кофе 2-3 раза в сутки, с нами за год вы сэкономите 600р, на семью выйдет ещё больше, так что пользуйтесь и экономьте!!!"
+          TextWrapping="Wrap" />
+                    </StackPanel>
+                </Expander>
+            </StackPanel>
+        </materialDesign:Card>
+        <Grid HorizontalAlignment="Left" Height="195" Margin="9,10,0,0" VerticalAlignment="Top" Width="491" Grid.ColumnSpan="3">
+            <Image Stretch="Fill" Source="D:\KursachCoffeCup\CoffeeCup\DesktopApp\Resurses\coffee2.gif" HorizontalAlignment="Left" Height="195" VerticalAlignment="Center" Width="515" Margin="-24,0,0,0"/>
+            <Label  Content="Спасибо, что выбрали нас!" HorizontalAlignment="Left" Margin="155,-79,0,0" VerticalAlignment="Top" Width="325" Height="44" FontSize="22" FontFamily="Arial Rounded MT Bold" FontWeight="Normal" FontStyle="Italic"/>
+        </Grid>
+    </Grid>
+</Page>

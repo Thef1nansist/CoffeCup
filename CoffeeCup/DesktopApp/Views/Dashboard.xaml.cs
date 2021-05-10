@@ -53,13 +53,13 @@ namespace DesktopApp.Views
         private void ListViewItem_MouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
         {
             var popular = new PopularCoffeeHouses(_coffeeHouseService);
-            popular.Show();
+            LoadWindowNew(popular);
         }
 
         private void ListViewItem_MouseLeftButtonDown_2(object sender, MouseButtonEventArgs e)
         {
             var favoriteCoffeeHousesPage = new FavoriteCoffeeHouses(_favoriteService, _appUserService);
-            favoriteCoffeeHousesPage.Show();
+            LoadWindowNew(favoriteCoffeeHousesPage);
         }
         private void Image_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
@@ -134,6 +134,11 @@ namespace DesktopApp.Views
             this.DragMove();
 
         }
-      
+
+        private void StackPanel_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            AboutDevelopersPage aboutDevelopersPage = new AboutDevelopersPage();
+            LoadWindowNew(aboutDevelopersPage);
+        }
     }
 }

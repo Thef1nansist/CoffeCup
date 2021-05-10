@@ -35,7 +35,7 @@ namespace DesktopApp.Views
         private void Popularbt_Click(object sender, RoutedEventArgs e)
         {
             var popular = new PopularCoffeeHouses(_coffeeHouseService);
-            popular.Show();
+            LoadWindowNew(popular);
         }
 
         private void AddCoffeeHouses_MouseDown(object sender, MouseButtonEventArgs e)

@@ -14,21 +14,20 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace DesktopApp.Views
 {
     /// <summary>
-    /// Interaction logic for PopularCoffeeHouses.xaml
+    /// Логика взаимодействия для PopularCoffeeHouses.xaml
     /// </summary>
-    public partial class PopularCoffeeHouses : Window
+    public partial class PopularCoffeeHouses : Page
     {
         private readonly ICoffeeHouseService _coffeeHouseService;
-
         public PopularCoffeeHouses(ICoffeeHouseService coffeeHouseService)
         {
             _coffeeHouseService = coffeeHouseService;
-
             InitializeComponent();
             DataContext = new PopularCoffeeHousesViewModel();
         }
