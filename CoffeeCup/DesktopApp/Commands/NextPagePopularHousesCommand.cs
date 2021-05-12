@@ -26,7 +26,7 @@ namespace DesktopApp.Commands
             remove { CommandManager.RequerySuggested -= value; }
         }
 
-
+        //1
 
         public bool CanExecute(object parameter)
         {
