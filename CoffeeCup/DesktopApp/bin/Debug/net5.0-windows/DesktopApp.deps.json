@@ -17,7 +17,11 @@
           "Microsoft.Extensions.DependencyInjection": "5.0.1",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
           "Microsoft.Extensions.Http": "5.0.0",
-          "System.IdentityModel.Tokens.Jwt": "6.11.0"
+          "Microsoft.Maps.MapControl.WPF": "1.0.0.3",
+          "System.IdentityModel.Tokens.Jwt": "6.11.0",
+          "GMap.NET.Core": "1.7.5.0",
+          "GMap.NET.WindowsForms": "1.7.5.0",
+          "GMap.NET.WindowsPresentation": "1.7.5.0"
         },
         "runtime": {
           "DesktopApp.dll": {}
@@ -261,6 +265,14 @@
           }
         }
       },
+      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
+        "runtime": {
+          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.1.0"
+          }
+        }
+      },
       "System.Buffers/4.5.1": {},
       "System.Diagnostics.DiagnosticSource/4.6.0": {},
       "System.IdentityModel.Tokens.Jwt/6.11.0": {
@@ -291,7 +303,31 @@
       "System.Security.Cryptography.Cng/4.5.0": {},
       "System.Text.Encodings.Web/4.7.2": {},
       "System.Text.Json/4.6.0": {},
-      "System.Threading.Tasks.Extensions/4.5.2": {}
+      "System.Threading.Tasks.Extensions/4.5.2": {},
+      "GMap.NET.Core/1.7.5.0": {
+        "runtime": {
+          "GMap.NET.Core.dll": {
+            "assemblyVersion": "1.7.5.0",
+            "fileVersion": "1.7.5.0"
+          }
+        }
+      },
+      "GMap.NET.WindowsForms/1.7.5.0": {
+        "runtime": {
+          "GMap.NET.WindowsForms.dll": {
+            "assemblyVersion": "1.7.5.0",
+            "fileVersion": "1.7.5.0"
+          }
+        }
+      },
+      "GMap.NET.WindowsPresentation/1.7.5.0": {
+        "runtime": {
+          "GMap.NET.WindowsPresentation.dll": {
+            "assemblyVersion": "1.7.5.0",
+            "fileVersion": "1.7.5.0"
+          }
+        }
+      }
     }
   },
   "libraries": {
@@ -454,6 +490,13 @@
       "path": "microsoft.identitymodel.tokens/6.11.0",
       "hashPath": "microsoft.identitymodel.tokens.6.11.0.nupkg.sha512"
     },
+    "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-P5Xys9PH/NIZY8qPASd03VOrZ/eXyS1hSoruR7oM+Otn98DkvUD1LwO8m9Aro4/5jCU1BgRmOTJrIQm5y9UHnQ==",
+      "path": "microsoft.maps.mapcontrol.wpf/1.0.0.3",
+      "hashPath": "microsoft.maps.mapcontrol.wpf.1.0.0.3.nupkg.sha512"
+    },
     "System.Buffers/4.5.1": {
       "type": "package",
       "serviceable": true,
@@ -523,6 +566,21 @@
       "sha512": "sha512-BG/TNxDFv0svAzx8OiMXDlsHfGw623BZ8tCXw4YLhDFDvDhNUEV58jKYMGRnkbJNm7c3JNNJDiN7JBMzxRBR2w==",
       "path": "system.threading.tasks.extensions/4.5.2",
       "hashPath": "system.threading.tasks.extensions.4.5.2.nupkg.sha512"
+    },
+    "GMap.NET.Core/1.7.5.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GMap.NET.WindowsForms/1.7.5.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GMap.NET.WindowsPresentation/1.7.5.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

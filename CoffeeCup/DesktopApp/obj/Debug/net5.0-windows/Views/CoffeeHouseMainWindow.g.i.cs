@@ -93,7 +93,7 @@ namespace DesktopApp.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/DesktopApp;component/views/coffeehousemainwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DesktopApp;V1.0.0.0;component/views/coffeehousemainwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\CoffeeHouseMainWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

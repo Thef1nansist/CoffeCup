@@ -118,3 +118,9 @@ D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\Statistic
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\StatisticControll.baml
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\AboutDevelopersPage.g.cs
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\AboutDevelopersPage.baml
+D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\MapPage.g.cs
+D:\KursachCoffeCup\CoffeeCup\DesktopApp\bin\Debug\net5.0-windows\GMap.NET.Core.dll
+D:\KursachCoffeCup\CoffeeCup\DesktopApp\bin\Debug\net5.0-windows\GMap.NET.WindowsPresentation.dll
+D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\MapPage.baml
+D:\KursachCoffeCup\CoffeeCup\DesktopApp\bin\Debug\net5.0-windows\GMap.NET.WindowsForms.dll
+D:\KursachCoffeCup\CoffeeCup\DesktopApp\bin\Debug\net5.0-windows\Microsoft.Maps.MapControl.WPF.dll

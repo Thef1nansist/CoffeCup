@@ -44,7 +44,12 @@ namespace DesktopApp.Services
         {
             var request = new HttpRequestMessage(HttpMethod.Get, $"/api/favorites?userId={_appUserService.UserId}");
 
-            using var client = _httpClientFactory.CreateClient("CoffeeHouseApi");
+            using var client =
+                
+                
+                
+                
+                _httpClientFactory.CreateClient("CoffeeHouseApi");
             request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", _appUserService.JWT);
 
             var response = await client.SendAsync(request);

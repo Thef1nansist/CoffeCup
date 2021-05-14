@@ -140,5 +140,12 @@ namespace DesktopApp.Views
             AboutDevelopersPage aboutDevelopersPage = new AboutDevelopersPage();
             LoadWindowNew(aboutDevelopersPage);
         }
+
+        private void StackPanel_MouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
+        {
+            MapPage mapPage = new MapPage(_coffeeHouseService);
+            LoadWindowNew(mapPage);
+
+        }
     }
 }

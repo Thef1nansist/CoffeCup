@@ -52,6 +52,10 @@
               "target": "Package",
               "version": "[4.0.0, )"
             },
+            "Microsoft.Azure.Search.Service": {
+              "target": "Package",
+              "version": "[10.1.0, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[5.0.0, )"
@@ -75,6 +79,14 @@
             "Microsoft.Extensions.Http": {
               "target": "Package",
               "version": "[5.0.0, )"
+            },
+            "Microsoft.Maps.MapControl.WPF": {
+              "target": "Package",
+              "version": "[1.0.0.3, )"
+            },
+            "NEST": {
+              "target": "Package",
+              "version": "[7.12.1, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
