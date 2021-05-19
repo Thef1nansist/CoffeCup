@@ -1,4 +1,5 @@
-﻿using Infrastructure.Models;
+﻿
+using Infrastructure.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,6 +10,8 @@ namespace Infrastructure.Contexts
         public DbSet<CoffeeHouse> CoffeeHouses { get; set; }
         public DbSet<Favorite> Favorites { get; set; }
         public DbSet<CoffeeItem> CoffeeItems { get; set; }
+
+        public DbSet<OrderedCoffee> OrderedCoffees { get; set; }
         public CoffeeCupContext(DbContextOptions<CoffeeCupContext> options) : base(options)
         {
 

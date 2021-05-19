@@ -141,6 +141,12 @@ namespace DesktopApp.Views
             LoadWindowNew(aboutDevelopersPage);
         }
 
+        private async void ListViewItem_MouseEnter_3(object sender, MouseButtonEventArgs e)
+        {
+            var userStatistics = new UserStatistics(_favoriteService);
+            LoadWindowNew(userStatistics);
+        }
+
         private void StackPanel_MouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
         {
             MapPage mapPage = new MapPage(_coffeeHouseService);

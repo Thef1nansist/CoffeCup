@@ -44,12 +44,7 @@ namespace DesktopApp.Services
         {
             var request = new HttpRequestMessage(HttpMethod.Get, $"/api/favorites?userId={_appUserService.UserId}");
 
-            using var client =
-                
-                
-                
-                
-                _httpClientFactory.CreateClient("CoffeeHouseApi");
+            using var client = _httpClientFactory.CreateClient("CoffeeHouseApi");
             request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", _appUserService.JWT);
 
             var response = await client.SendAsync(request);
@@ -62,6 +57,25 @@ namespace DesktopApp.Services
             });
 
             return res;
+        }
+        public IEnumerable<OrderedCoffee> GetOrderedCoffee()
+        {
+            var request = new HttpRequestMessage(HttpMethod.Get, $"/api/orderedcoffee?userId={_appUserService.UserId}");
+
+            using var client = _httpClientFactory.CreateClient("CoffeeHouseApi");
+            request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", _appUserService.JWT);
+
+            var response = client.Send(request);
+
+            using var responseStream = response.Content.ReadAsStream();
+
+            var res = JsonSerializer.DeserializeAsync<IEnumerable<OrderedCoffee>>(
+                responseStream, new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                });
+
+            return res.Result;
         }
     }
 }

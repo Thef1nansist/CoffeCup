@@ -22,18 +22,23 @@ namespace DesktopApp.Views
     public partial class AddCoffeeHouse : Page
     {
         private readonly ICoffeeHouseService _coffeeHouseService;
-        public AddCoffeeHouse(ICoffeeHouseService coffeeHouseService)
+        private readonly IAppUserService _appUserService;
+        public AddCoffeeHouse(ICoffeeHouseService coffeeHouseService, IAppUserService appUserService)
         {
             InitializeComponent();
             _coffeeHouseService = coffeeHouseService;
+            _appUserService = appUserService;
         }
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
+    
             await _coffeeHouseService.AddAsync(new Models.CoffeeHouse()
             {
+                CreatorId = _appUserService.UserId,
                 Name = AddCoffeeHouseName?.Text,
                 Address = AddCoffeeHouseAddress?.Text,
+                
                 CoffeeItems = new List<Models.CoffeeItem>()
                 {
                     new Models.CoffeeItem()
@@ -68,7 +73,8 @@ namespace DesktopApp.Views
                     }
 
                 }
-            }); ;
+            }) ;
+            ; ;
             MessageBox.Show("Готово");
             
             this.Content = null;

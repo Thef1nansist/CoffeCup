@@ -44,7 +44,7 @@ namespace BusinessLogic.Services
                 Debug.WriteLine(e);
                 throw;
             }
-            
+
         }
 
         public async Task<Favorite> UpdateAsync(Favorite item)
@@ -107,12 +107,23 @@ namespace BusinessLogic.Services
 
             var entities = await context.Favorites
                 .AsNoTracking()
-                .Include(x=>x.CoffeeHouse)
+                .Include(x => x.CoffeeHouse)
                 .Where(x => x.UserId == userId)
                 .ToListAsync()
                 .ConfigureAwait(false);
 
             return _mapper.Map<IEnumerable<Favorite>>(entities);
+        }
+        public IEnumerable<Infrastructure.Models.OrderedCoffee> GetOrderedCoffee(string userId)
+        {
+            using var context = _contextFactory.CreateDbContext();
+            var items = context.OrderedCoffees
+                .Include(x => x.Coffee)
+                .Where(x => x.UserId == userId)
+                .OrderBy(x => x.Id)
+                .ToList();
+
+            return items;
         }
     }
 }

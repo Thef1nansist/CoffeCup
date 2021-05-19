@@ -48,20 +48,6 @@ namespace Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "CoffeeHouses",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(type: "TEXT", nullable: true),
-                    Address = table.Column<string>(type: "TEXT", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_CoffeeHouses", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
@@ -168,6 +154,27 @@ namespace Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "CoffeeHouses",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    CreatorId = table.Column<string>(type: "TEXT", nullable: true),
+                    Name = table.Column<string>(type: "TEXT", nullable: true),
+                    Address = table.Column<string>(type: "TEXT", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CoffeeHouses", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_CoffeeHouses_AspNetUsers_CreatorId",
+                        column: x => x.CreatorId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "CoffeeItems",
                 columns: table => new
                 {
@@ -215,6 +222,32 @@ namespace Infrastructure.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "OrderedCoffees",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    UserId = table.Column<string>(type: "TEXT", nullable: true),
+                    CoffeeId = table.Column<int>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_OrderedCoffees", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_OrderedCoffees_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_OrderedCoffees_CoffeeItems_CoffeeId",
+                        column: x => x.CoffeeId,
+                        principalTable: "CoffeeItems",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -253,6 +286,11 @@ namespace Infrastructure.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_CoffeeHouses_CreatorId",
+                table: "CoffeeHouses",
+                column: "CreatorId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_CoffeeItems_CoffeeHouseId",
                 table: "CoffeeItems",
                 column: "CoffeeHouseId");
@@ -265,6 +303,16 @@ namespace Infrastructure.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Favorites_UserId",
                 table: "Favorites",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_OrderedCoffees_CoffeeId",
+                table: "OrderedCoffees",
+                column: "CoffeeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_OrderedCoffees_UserId",
+                table: "OrderedCoffees",
                 column: "UserId");
         }
 
@@ -286,19 +334,22 @@ namespace Infrastructure.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "CoffeeItems");
+                name: "Favorites");
 
             migrationBuilder.DropTable(
-                name: "Favorites");
+                name: "OrderedCoffees");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
-                name: "AspNetUsers");
+                name: "CoffeeItems");
 
             migrationBuilder.DropTable(
                 name: "CoffeeHouses");
+
+            migrationBuilder.DropTable(
+                name: "AspNetUsers");
         }
     }
 }

@@ -43,9 +43,29 @@ namespace BusinessLogic.Services
                 Debug.WriteLine(e);
                 throw;
             }
-            
-        }
 
+        }
+        public async Task<List<CoffeeItem>> GetCoffeeItemByUserAsync(string userId)
+        {
+            try
+            {
+                using var context = _contextFactory.CreateDbContext();
+                var coffeeItems = await context.OrderedCoffees
+                    .Include(x => x.Coffee)
+                    .Where(x => x.UserId == userId)
+                    .Select(x => x.Coffee)
+                    .ToListAsync()
+                    .ConfigureAwait(false);
+
+                return _mapper.Map<List<CoffeeItem>>(coffeeItems);
+            }
+            catch (System.Exception e)
+            {
+                Debug.WriteLine(e);
+                throw;
+            }
+
+        }
         public async Task<CoffeeHouse> UpdateAsync(CoffeeHouse item)
         {
             using var context = _contextFactory.CreateDbContext();
@@ -102,8 +122,19 @@ namespace BusinessLogic.Services
                 .ConfigureAwait(false);
             return _mapper.Map<IEnumerable<CoffeeHouse>>(entities);
         }
+        public async Task<IEnumerable<CoffeeHouse>> GetAllAsync(string adminId)
+        {
+            using var context = _contextFactory.CreateDbContext(); //для работы с любыми данными юзать using
 
-        public async Task SellCoffeeItemAsync(int id)
+            var entities = await context.CoffeeHouses
+                .AsNoTracking()
+                .Include(x => x.CoffeeItems)
+                .Where(x => x.CreatorId == adminId)
+                .ToListAsync()
+                .ConfigureAwait(false);
+            return _mapper.Map<IEnumerable<CoffeeHouse>>(entities);
+        }
+        public async Task SellCoffeeItemAsync(string userId, int id)
         {
             using var context = _contextFactory.CreateDbContext();
 
@@ -115,13 +146,23 @@ namespace BusinessLogic.Services
 
             context.CoffeeItems.Update(coffeeItem);
             await context.SaveChangesAsync().ConfigureAwait(false);
-        }
 
+            var user = context.Users.First(u => u.Id == userId);
+            context.OrderedCoffees.Add(new DAM.OrderedCoffee
+            {
+                CoffeeId = coffeeItem.Id,
+                UserId = user.Id,
+                Coffee = coffeeItem,
+                User = user
+            });
+
+            await context.SaveChangesAsync().ConfigureAwait(false);
+        }
         public async Task<IEnumerable<CoffeeHouse>> GetPopularCoffeeHouses()
         {
             using var context = _contextFactory.CreateDbContext();
             var items = await context.CoffeeHouses
-                .Include(x=>x.CoffeeItems)
+                .Include(x => x.CoffeeItems)
                 .Where(x => x.CoffeeItems.Any(x => x.SoldCounter > 10))
                 .OrderBy(x => x.Name)
                 .Take(10)

@@ -38,7 +38,7 @@ namespace DesktopApp.Services
             var res = await JsonSerializer.DeserializeAsync<CoffeeHouse>(responseStream, new JsonSerializerOptions
             {
                 PropertyNameCaseInsensitive = true,
-                
+
             });
 
             return res;
@@ -61,7 +61,22 @@ namespace DesktopApp.Services
 
             return res;
         }
+        public async Task<IEnumerable<CoffeeHouse>> GetAsync(string adminId)
+        {
+            var request = new HttpRequestMessage(HttpMethod.Put, "/api/coffeehouses");
+            using var client = _httpClientFactory.CreateClient("CoffeeHouseApi");
+            var item = JsonSerializer.Serialize(new GetCoffeeHouseByAdmin { AdminId = adminId });
+            request.Content = new StringContent(item, Encoding.UTF8, "application/json");
+            var response = await client.SendAsync(request);
+            await using var responseStream = await response.Content.ReadAsStreamAsync();
 
+            var res = await JsonSerializer.DeserializeAsync<IEnumerable<CoffeeHouse>>(responseStream, new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            });
+
+            return res;
+        }
         public async Task<IEnumerable<CoffeeHouse>> GetPopularCoffeeHouses()
         {
             var request = new HttpRequestMessage(HttpMethod.Get, "/api/coffeehouses/GetPopularCoffeeHouses");
@@ -72,17 +87,18 @@ namespace DesktopApp.Services
 
             await using var responseStream = await response.Content.ReadAsStreamAsync();
 
-            var res = await JsonSerializer.DeserializeAsync<IEnumerable<CoffeeHouse>>(responseStream, new JsonSerializerOptions
-            {
-                PropertyNameCaseInsensitive = true
-            });
+            var res = await JsonSerializer.DeserializeAsync<IEnumerable<CoffeeHouse>>(
+                responseStream, new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                });
 
             return res;
         }
 
-        public async Task SellCoffeeItemAsync(int id)
+        public async Task SellCoffeeItemAsync(string userId, int id)
         {
-            var request = new HttpRequestMessage(HttpMethod.Get, $"/api/coffeeitems/sellCoffeeItem/{id}");
+            var request = new HttpRequestMessage(HttpMethod.Get, $"/api/coffeeitems/sellCoffeeItem/{id}/{userId}");
 
             using var client = _httpClientFactory.CreateClient("CoffeeHouseApi");
 
@@ -91,6 +107,6 @@ namespace DesktopApp.Services
             await client.SendAsync(request);
 
         }
-        
+
     }
 }

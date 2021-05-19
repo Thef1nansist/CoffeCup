@@ -3,6 +3,7 @@ FD:\KursachCoffeCup\CoffeeCup\DesktopApp\App.xaml;;
 FD:\KursachCoffeCup\CoffeeCup\DesktopApp\MainWindow.xaml;;
 FD:\KursachCoffeCup\CoffeeCup\DesktopApp\Views\AboutDevelopersPage.xaml;;
 FD:\KursachCoffeCup\CoffeeCup\DesktopApp\Views\AddCoffeeHouse.xaml;;
+FD:\KursachCoffeCup\CoffeeCup\DesktopApp\Views\AdminStatistics.xaml;;
 FD:\KursachCoffeCup\CoffeeCup\DesktopApp\Views\CoffeeHouseMainWindow.xaml;;
 FD:\KursachCoffeCup\CoffeeCup\DesktopApp\Views\CoffeeHousesView.xaml;;
 FD:\KursachCoffeCup\CoffeeCup\DesktopApp\Views\Dashboard.xaml;;
@@ -11,4 +12,5 @@ FD:\KursachCoffeCup\CoffeeCup\DesktopApp\Views\MapPage.xaml;;
 FD:\KursachCoffeCup\CoffeeCup\DesktopApp\Views\PopularCoffeeHouses.xaml;;
 FD:\KursachCoffeCup\CoffeeCup\DesktopApp\Views\RegWindowCoffeeHouse.xaml;;
 FD:\KursachCoffeCup\CoffeeCup\DesktopApp\Views\StatisticControll.xaml;;
+FD:\KursachCoffeCup\CoffeeCup\DesktopApp\Views\UserStatistics.xaml;;
 

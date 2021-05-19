@@ -13,6 +13,7 @@ namespace CoffeeHouseApi.Controllers
     public class CoffeeHousesController : ControllerBase
     {
         private readonly ICoffeeHouseService _coffeeHouseService;
+
         public CoffeeHousesController(ICoffeeHouseService coffeeHouseService)
         {
             _coffeeHouseService = coffeeHouseService;
@@ -26,12 +27,22 @@ namespace CoffeeHouseApi.Controllers
                 .ConfigureAwait(false);
             return Ok(result);
         }
+
         // GET: api/<CoffeeHousesController>
         [HttpGet]
         public async Task<IActionResult> Get()
         {
             var result = await _coffeeHouseService
                 .GetAllAsync()
+                .ConfigureAwait(false);
+            return Ok(result);
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> Get([FromBody] GetCoffeeHousesByAdmin command)
+        {
+            var result = await _coffeeHouseService
+                .GetAllAsync(command.AdminId)
                 .ConfigureAwait(false);
             return Ok(result);
         }

@@ -13,8 +13,12 @@
         "packagesPath": "C:\\Users\\Vlad\\.nuget\\packages\\",
         "outputPath": "D:\\KursachCoffeCup\\CoffeeCup\\DesktopApp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\Vlad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,6 +47,10 @@
             "Azure.Core": {
               "target": "Package",
               "version": "[1.13.0, )"
+            },
+            "LiveCharts.Wpf": {
+              "target": "Package",
+              "version": "[0.9.7, )"
             },
             "MaterialDesignColors": {
               "target": "Package",

@@ -60,7 +60,7 @@ namespace DesktopApp.Views
         {
             var id = (int)((Button)sender).Tag;
             var coffeeHouseId = ((CoffeeHouseViewModel)DataContext).SelectedCoffeeHouse.Id;
-            await _coffeeHouseService.SellCoffeeItemAsync(id);
+            await _coffeeHouseService.SellCoffeeItemAsync(_appUserService.UserId, id);
         }
     }
 }

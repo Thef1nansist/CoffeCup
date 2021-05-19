@@ -56,7 +56,7 @@
 
             </ListBox>
         </StackPanel>
-        <m:Map CredentialsProvider="AttsGkqIHCOIEA11KtQZDphl5bi8lppin64jeg-ZOOhiS4cdHA_EXJwHSbyZi4Xo" Mode="Road" Grid.Column="1" Grid.Row="1" ZoomLevel="16" Center="55.5570304,27.3306103">
+        <m:Map Name="MyMap" CredentialsProvider="AttsGkqIHCOIEA11KtQZDphl5bi8lppin64jeg-ZOOhiS4cdHA_EXJwHSbyZi4Xo" Mode="Road" Grid.Column="1" Grid.Row="1" ZoomLevel="16" Center="55.5570304,27.3306103">
             <Canvas
         m:MapLayer.Position="-23.1870304,-50.6606103"
         m:MapLayer.PositionOrigin="BottomCenter" Width="30" Height="30">

@@ -92,10 +92,15 @@ namespace Infrastructure.Migrations
                     b.Property<string>("Address")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("CreatorId")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Name")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CreatorId");
 
                     b.ToTable("CoffeeHouses");
                 });
@@ -144,6 +149,27 @@ namespace Infrastructure.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Favorites");
+                });
+
+            modelBuilder.Entity("Infrastructure.Models.OrderedCoffee", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CoffeeId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CoffeeId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("OrderedCoffees");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -274,6 +300,15 @@ namespace Infrastructure.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("Infrastructure.Models.CoffeeHouse", b =>
+                {
+                    b.HasOne("Infrastructure.Models.AppUser", "Creator")
+                        .WithMany()
+                        .HasForeignKey("CreatorId");
+
+                    b.Navigation("Creator");
+                });
+
             modelBuilder.Entity("Infrastructure.Models.CoffeeItem", b =>
                 {
                     b.HasOne("Infrastructure.Models.CoffeeHouse", "CoffeeHouse")
@@ -298,6 +333,23 @@ namespace Infrastructure.Migrations
                         .HasForeignKey("UserId");
 
                     b.Navigation("CoffeeHouse");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Infrastructure.Models.OrderedCoffee", b =>
+                {
+                    b.HasOne("Infrastructure.Models.CoffeeItem", "Coffee")
+                        .WithMany()
+                        .HasForeignKey("CoffeeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Infrastructure.Models.AppUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("Coffee");
 
                     b.Navigation("User");
                 });

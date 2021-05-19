@@ -13,6 +13,9 @@
     <Compile Update="Views\AddCoffeeHouse.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\AdminStatistics.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\CoffeeHouseMainWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -37,6 +40,9 @@
     <Compile Update="Views\StatisticControll.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\UserStatistics.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
@@ -46,6 +52,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\AddCoffeeHouse.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AdminStatistics.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\CoffeeHouseMainWindow.xaml">
@@ -70,6 +79,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\StatisticControll.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\UserStatistics.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -21,7 +21,7 @@ namespace BusinessLogic.Services
         private readonly UserManager<DA.AppUser> _userManager;
         private readonly IConfiguration _configuration;
         private readonly IMapper _mapper;
-        public static bool flag; 
+        public static bool flag;
 
         public AppUserService(UserManager<DA.AppUser> userManager, IConfiguration configuration, IMapper mapper)
         {
@@ -55,9 +55,9 @@ namespace BusinessLogic.Services
                     new Claim(JwtRegisteredClaimNames.Sub, userDA?.Id)
                 }).ConfigureAwait(false);
                 }
-              
+
             }
-            
+
             return result;
         }
 
@@ -114,7 +114,7 @@ namespace BusinessLogic.Services
                 //generates user claims
                 var claims = await _userManager.GetClaimsAsync(existUser).ConfigureAwait(false);
                 //create JWT
-                
+
 
                 return (CreateToken(claims), existUser.Id, existUser.IsAdmin);
             }

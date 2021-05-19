@@ -5,16 +5,16 @@ winexe
 C#
 .cs
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\
-DesktopApp_voircheh_wpftmp
+DesktopApp
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\App.xaml
-11-1521779478
+13784555016
 11413424753
-471568463161
-222568620848
-MainWindow.xaml;Views\AboutDevelopersPage.xaml;Views\AddCoffeeHouse.xaml;Views\CoffeeHouseMainWindow.xaml;Views\CoffeeHousesView.xaml;Views\Dashboard.xaml;Views\FavoriteCoffeeHouses.xaml;Views\MapPage.xaml;Views\PopularCoffeeHouses.xaml;Views\RegWindowCoffeeHouse.xaml;Views\StatisticControll.xaml;
+40-1009425733
+2301100643395
+MainWindow.xaml;Views\AboutDevelopersPage.xaml;Views\AddCoffeeHouse.xaml;Views\AdminStatistics.xaml;Views\CoffeeHouseMainWindow.xaml;Views\CoffeeHousesView.xaml;Views\Dashboard.xaml;Views\FavoriteCoffeeHouses.xaml;Views\MapPage.xaml;Views\PopularCoffeeHouses.xaml;Views\RegWindowCoffeeHouse.xaml;Views\StatisticControll.xaml;Views\UserStatistics.xaml;
 
-True
+False
 

@@ -37,12 +37,10 @@ namespace CoffeeHouseApi.Controllers
         public void Post([FromBody] string value)
         {
         }
-
-        // PUT api/<CoffeeItemsController>/5
-        [HttpGet("sellCoffeeItem/{id}")]
-        public async Task<IActionResult> SellCoffeeItem(int id)
+        [HttpGet("sellCoffeeItem/{id}/{userId}")]
+        public async Task<IActionResult> SellCoffeeItem(int id, string userId)
         {
-            await _coffeeHouseService.SellCoffeeItemAsync(id);
+            await _coffeeHouseService.SellCoffeeItemAsync(userId, id);
             return Ok();
         }
 

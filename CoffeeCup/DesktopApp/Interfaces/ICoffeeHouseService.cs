@@ -11,7 +11,8 @@ namespace DesktopApp.Interfaces
     {
         Task<CoffeeHouse> AddAsync(CoffeeHouse coffeeHouse);
         Task<IEnumerable<CoffeeHouse>> GetAsync();
-        Task SellCoffeeItemAsync(int id);
+        Task<IEnumerable<CoffeeHouse>> GetAsync(string adminId);
+        Task SellCoffeeItemAsync(string userId, int id);
         Task<IEnumerable<CoffeeHouse>> GetPopularCoffeeHouses();
     }
 }

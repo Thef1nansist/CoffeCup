@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "H5LuqT9JoAxVaQ9gYvar6La6eNE/GdVBXBkrHwfTrJK4wNWh8vzyuovTBNN011DeIKTEZZp589YJMU3fcbxpfg==",
+  "dgSpecHash": "97xEXliGvp2Q5wk6Egg+NvDBzJQr+vsF8RpKyMn/pv+sIybsk8+yNSI8zMwJUvW9LtFmFNWfirbpNh49orZcgQ==",
   "success": true,
   "projectFilePath": "D:\\KursachCoffeCup\\CoffeeCup\\DesktopApp\\DesktopApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vlad\\.nuget\\packages\\azure.core\\1.13.0\\azure.core.1.13.0.nupkg.sha512",
     "C:\\Users\\Vlad\\.nuget\\packages\\elasticsearch.net\\7.12.1\\elasticsearch.net.7.12.1.nupkg.sha512",
+    "C:\\Users\\Vlad\\.nuget\\packages\\livecharts\\0.9.7\\livecharts.0.9.7.nupkg.sha512",
+    "C:\\Users\\Vlad\\.nuget\\packages\\livecharts.wpf\\0.9.7\\livecharts.wpf.0.9.7.nupkg.sha512",
     "C:\\Users\\Vlad\\.nuget\\packages\\materialdesigncolors\\2.0.0\\materialdesigncolors.2.0.0.nupkg.sha512",
     "C:\\Users\\Vlad\\.nuget\\packages\\materialdesignthemes\\4.0.0\\materialdesignthemes.4.0.0.nupkg.sha512",
     "C:\\Users\\Vlad\\.nuget\\packages\\microsoft.azure.search.common\\10.1.0\\microsoft.azure.search.common.10.1.0.nupkg.sha512",
@@ -124,6 +126,26 @@
     "C:\\Users\\Vlad\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"LiveCharts 0.9.7\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\", а не целевой платформы проекта \"net5.0-windows7.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "LiveCharts",
+      "targetGraphs": [
+        "net5.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"LiveCharts.Wpf 0.9.7\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\", а не целевой платформы проекта \"net5.0-windows7.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "LiveCharts.Wpf",
+      "targetGraphs": [
+        "net5.0-windows7.0"
+      ]
+    },
     {
       "code": "NU1701",
       "level": "Warning",

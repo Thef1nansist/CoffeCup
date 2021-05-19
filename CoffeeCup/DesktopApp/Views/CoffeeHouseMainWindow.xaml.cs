@@ -40,7 +40,7 @@ namespace DesktopApp.Views
 
         private void AddCoffeeHouses_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            AddCoffeeHouse addCoffee = new AddCoffeeHouse(_coffeeHouseService);
+            AddCoffeeHouse addCoffee = new AddCoffeeHouse(_coffeeHouseService,_appUserService);
             LoadWindowNew(addCoffee);
             
         }
@@ -50,7 +50,11 @@ namespace DesktopApp.Views
             NewAddCompany.NavigationUIVisibility = System.Windows.Navigation.NavigationUIVisibility.Hidden;
             NewAddCompany.Content = pageToLoad;
         }
-
+        private void Statisticbt_Click(object sender, RoutedEventArgs e)
+        {
+            var statistics = new AdminStatistics(_appUserService, _coffeeHouseService);
+            LoadWindowNew(statistics);
+        }
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();
