@@ -58,7 +58,7 @@
                     </StackPanel>
                 </ListViewItem>
                 <ListViewItem Height="45" Padding="0"  Background="#FF222222">
-                    <StackPanel Orientation="Horizontal" Width="250">
+                    <StackPanel Orientation="Horizontal" Width="250"  MouseLeftButtonDown="StackPanel_MouseLeftButtonDown_2">
                         <materialDesign:PackIcon Kind="Basket" Width="20" Height="20" Foreground="White"  Margin="14 0 4 0" VerticalAlignment="Center"/>
                         <TextBlock Text="Мои Заказы" Foreground="White" Margin="10"/>
                     </StackPanel>

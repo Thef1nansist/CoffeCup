@@ -153,5 +153,11 @@ namespace DesktopApp.Views
             LoadWindowNew(mapPage);
 
         }
+
+        private void StackPanel_MouseLeftButtonDown_2(object sender, MouseButtonEventArgs e)
+        {
+            MyItemsCoffeePage myItemsCoffeePage = new MyItemsCoffeePage(_coffeeHouseService, _appUserService);
+            LoadWindowNew(myItemsCoffeePage);
+        }
     }
 }

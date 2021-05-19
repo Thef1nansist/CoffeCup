@@ -28,6 +28,8 @@ namespace CoffeeHouseApi.Controllers
             return Ok(result);
         }
 
+
+
         // GET: api/<CoffeeHousesController>
         [HttpGet]
         public async Task<IActionResult> Get()
@@ -45,6 +47,15 @@ namespace CoffeeHouseApi.Controllers
                 .GetAllAsync(command.AdminId)
                 .ConfigureAwait(false);
             return Ok(result);
+        }
+
+        [HttpGet("GetCoffeeItemByUserAsync")]
+        public async Task<IActionResult> GetCoffeeItemByUserAsync([FromQuery] string idUser)
+        {
+            var rezult = await _coffeeHouseService
+                .GetCoffeeItemByUserAsync(idUser)
+                .ConfigureAwait(false);
+            return Ok(rezult);
         }
 
         // GET api/<CoffeeHousesController>/5

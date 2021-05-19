@@ -138,3 +138,5 @@ D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\ref\DesktopApp.
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\DesktopApp.pdb
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\DesktopApp.genruntimeconfig.cache
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\DesktopApp.csprojAssemblyReference.cache
+D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\MyItemsCoffeePage.g.cs
+D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\MyItemsCoffeePage.baml
