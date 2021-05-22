@@ -49,6 +49,9 @@ namespace DesktopApp.Views
         {
             var context = (CoffeeHouseViewModel)DataContext;
 
+            if (await _favoriteService.GetSameFavoritesCoffeeHouses(_appUserService.UserId, context.SelectedCoffeeHouse.Id))
+                return;
+
             await _favoriteService
                 .CreateFavoriteCoffeeHouse(new AddFavoriteCoffeeHouse()
                 {

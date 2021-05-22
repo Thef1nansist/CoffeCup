@@ -10,14 +10,18 @@
         Title="AboutDevelopersPage" Height="420" Width="730" >
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition Width="38*"/>
         </Grid.ColumnDefinitions>
         <Image  Source="D:\KursachCoffeCup\CoffeeCup\DesktopApp\Resurses\me.jpg"
-      Stretch="Uniform" Margin="468,0,0,195" Grid.Column="2" />
-        <Grid Grid.Column="2" HorizontalAlignment="Left" Height="170" Margin="460,250,0,0" VerticalAlignment="Top" Width="234">
+      Stretch="Uniform" Margin="468,0,0,55" Grid.Column="2" />
+        <Grid Grid.Column="2" HorizontalAlignment="Left" Height="170" Margin="460,250,0,0" VerticalAlignment="Top" Width="234" Grid.RowSpan="2">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition Height="0*"/>
@@ -32,7 +36,7 @@
         </Grid>
 
         <materialDesign:Card
-  Background="{DynamicResource MaterialDesignBackground}" Grid.ColumnSpan="3" Margin="-15,210,234,0">
+  Background="{DynamicResource MaterialDesignBackground}" Grid.ColumnSpan="3" Margin="10,210,234,0" Grid.RowSpan="2">
             <StackPanel Margin="0,-10,0,-45">
                 <Expander
       HorizontalAlignment="Stretch"
@@ -92,7 +96,7 @@
             </StackPanel>
         </materialDesign:Card>
         <Grid HorizontalAlignment="Left" Height="195" Margin="9,10,0,0" VerticalAlignment="Top" Width="491" Grid.ColumnSpan="3">
-            <Image Stretch="Fill" Source="D:\KursachCoffeCup\CoffeeCup\DesktopApp\Resurses\coffee2.gif" HorizontalAlignment="Left" Height="195" VerticalAlignment="Center" Width="515" Margin="-24,0,0,0"/>
+            <Image Stretch="Fill" Source="D:\KursachCoffeCup\CoffeeCup\DesktopApp\Resurses\coffee2.gif" HorizontalAlignment="Center" Height="195" VerticalAlignment="Center" Width="491"/>
             <Label  Content="Спасибо, что выбрали нас!" HorizontalAlignment="Left" Margin="155,-79,0,0" VerticalAlignment="Top" Width="325" Height="44" FontSize="22" FontFamily="Arial Rounded MT Bold" FontWeight="Normal" FontStyle="Italic"/>
         </Grid>
     </Grid>

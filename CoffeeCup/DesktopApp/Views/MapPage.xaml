@@ -23,7 +23,7 @@
 
             <StackPanel Grid.Row="1" Margin="10">
             <Grid DataContext="{Binding SelectedCoffeeHouse}">
-                <TextBox Text="{Binding Path=Address, UpdateSourceTrigger=PropertyChanged}" Background="White" FontSize="16" Padding="20 0 25 0"/>
+                <TextBox Name ="searchfields"  Text="{Binding Path=Address, UpdateSourceTrigger=PropertyChanged}" Background="White" FontSize="16" Padding="20 0 25 0"/>
                 <materialDesign:PackIcon Kind="MapMarker" VerticalAlignment="Center" Margin="2"/>
                 <Button HorizontalAlignment="Right" Style="{StaticResource MaterialDesignFlatButton}">
                     <materialDesign:PackIcon Kind="Search"/>

@@ -47,8 +47,8 @@ namespace DesktopApp.Views
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            
-            if (UserName.Text == "" || Password.Text == "")
+
+            if (UserName.Text == "" || Password.Text == "" || UserName.Text.Length < 4 || Password.Text.Length < 4)
             {
                 MessageBox.Show("Некорректное значение полей");
                 return;
@@ -64,8 +64,6 @@ namespace DesktopApp.Views
                 MessageBox.Show("Данный логин уже занят");
             }
 
-
-            //
         }
 
         private void Label_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

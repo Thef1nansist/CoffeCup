@@ -63,11 +63,6 @@
             <materialDesign:PackIcon Kind="Instagram" Height="28" Foreground="#DD8E009C"  />
         </ToggleButton>
         <!--#endregion-->
-        <!--<TextBox x:Name="UserName" TextWrapping="Wrap" Grid.Row="1" Margin="10,10,10,10" Grid.ColumnSpan="2" FontSize="16" TextAlignment="Center" Grid.Column="1" />
-        <Button Grid.Column="3" Grid.Row="1" Content="Регистрация" Click="Button_Click" Margin="10,10,10,10"/>
-        <PasswordBox x:Name="Password" Grid.ColumnSpan="2" Margin="10,10,10,10" Grid.Row="2" FontSize="16" PasswordChar="*" Grid.Column="1" />
-        <Button Content="Войти" Grid.Column="3" Margin="10,10,10,10" Grid.Row="2" Click="Button_Click_1" />
-        <Label Content="Логин:" Target="UserName" FontSize="14" Margin="135,10,10,10" Grid.Row="1"/>
-        <Label Content="Пароль:" Margin="126,10,10,10" Grid.Row="2" FontSize="14"/>-->
+        
     </Grid>
 </Window>

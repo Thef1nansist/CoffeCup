@@ -77,5 +77,22 @@ namespace DesktopApp.Services
 
             return res.Result;
         }
+
+        public async Task<bool> GetSameFavoritesCoffeeHouses(string userId, int CoffeeHouseId)
+        {
+            var request = new HttpRequestMessage(HttpMethod.Get, $"/api/favorites/{userId}/{CoffeeHouseId}");
+
+            using var client = _httpClientFactory.CreateClient("CoffeeHouseApi");
+            request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", _appUserService.JWT);
+
+            var response = await client.SendAsync(request);
+
+            await using var responseStream = await response.Content.ReadAsStreamAsync();
+
+            var res = await JsonSerializer.DeserializeAsync<bool>(responseStream);
+
+
+            return res;
+        }
     }
 }

@@ -114,6 +114,7 @@ namespace BusinessLogic.Services
 
             return _mapper.Map<IEnumerable<Favorite>>(entities);
         }
+       
         public IEnumerable<Infrastructure.Models.OrderedCoffee> GetOrderedCoffee(string userId)
         {
             using var context = _contextFactory.CreateDbContext();
@@ -124,6 +125,18 @@ namespace BusinessLogic.Services
                 .ToList();
 
             return items;
+        }
+
+        public async Task<bool> GetSameFavoritesCoffeeHouses(string userId, int CoffeeHouseId)
+        {
+            using var context = _contextFactory.CreateDbContext();
+            var items = await context.Favorites
+                .Where(x => x.UserId == userId)
+                .Where(x => x.CoffeeHouseId == CoffeeHouseId)
+                .AsNoTracking()
+                .ToListAsync()
+                .ConfigureAwait(false);
+            return items.Count > 0;
         }
     }
 }

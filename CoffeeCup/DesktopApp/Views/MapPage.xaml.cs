@@ -13,7 +13,8 @@ using System.Windows.Controls;
 using Microsoft.Maps.MapControl;
 
 using System.Windows.Input;
-
+using System.IO;
+using System.Text.Json;
 
 namespace DesktopApp.Views
 {
@@ -38,6 +39,32 @@ namespace DesktopApp.Views
             listOfCoffeeHouses.ItemsSource = datacontext.CoffeeHouses;
             //MyMap
             //GeoLocation geo = new GeoLocation();
+
+        }
+
+        private void SearchAddress()
+        {
+
+            string userIp = "127.0.0.1";
+            string request = "http://dev.virtualearth.net/REST/v1/Locations?addressLine={searchfields.}&userLocation={userLocation}&userIp={userIp}&key={BingMapsKey}";
+            string url = string.Format(request, Uri.EscapeDataString(searchfields.Text));
+
+            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
+
+            WebResponse response = req.GetResponse();
+
+            Stream stream = response.GetResponseStream();
+
+            StreamReader streamReader = new StreamReader(stream);
+
+            string responsereader = streamReader.ReadToEnd();
+
+            response.Close();
+
+            JsonSerializer.Deserialize
+
+            //GeoLocation nasd = new GeoLocation();
+
 
         }
 

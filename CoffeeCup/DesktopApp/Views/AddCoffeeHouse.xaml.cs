@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Text.RegularExpressions;
 
 namespace DesktopApp.Views
 {
@@ -32,6 +33,12 @@ namespace DesktopApp.Views
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
+           if(AddCoffeeHouseName.Text == "" || AddCoffeeHouseName.Text == " " || AddCoffeeHouseAddress.Text == "" || AddCoffeeHouseAddress.Text ==" ")
+            {
+                MessageBox.Show("Некорректные данные");
+                return;
+            }
+           
     
             await _coffeeHouseService.AddAsync(new Models.CoffeeHouse()
             {

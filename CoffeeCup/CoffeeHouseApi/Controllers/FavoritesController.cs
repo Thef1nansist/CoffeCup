@@ -30,6 +30,15 @@ namespace CoffeeHouseApi.Controllers
                 .ConfigureAwait(false);
             return Ok(result);
         }
+        [HttpGet("{id}/{coffeeHouseId}")]
+        public async Task<IActionResult> Get( string id, int coffeeHouseId)
+        {
+            var result = await _favoriteService
+                .GetSameFavoritesCoffeeHouses(id, coffeeHouseId)
+                .ConfigureAwait(false); 
+
+            return Ok(result);
+        }
 
         // GET api/<FavoritesController>/5
         [HttpGet("{id}")]
