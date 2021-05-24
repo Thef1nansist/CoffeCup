@@ -23,12 +23,11 @@
         <Grid x:Name="FooterMenu" Grid.Column="1" Grid.ColumnSpan="3" Height="30" Background="#FF222222" VerticalAlignment="Center" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
             <Button x:Name="ButtonMenu" HorizontalAlignment="Left" VerticalAlignment="Top" Width="38" Height="26"  Padding="0" Margin="250,5,0,0"   Background="{x:Null}" BorderBrush="{x:Null}"/>
             <Image HorizontalAlignment="Right" Height="16" Margin="0,5,12,0" VerticalAlignment="Top" Width="16" Source="D:\KursachCoffeCup\CoffeeCup\DesktopApp\Resurses\circle-64.ico" MouseDown="Image_MouseDown" Cursor="Arrow"/>
-            <Image x:Name="cryl1" HorizontalAlignment="Right"  Height="16" Margin="0,5,33,0" VerticalAlignment="Top" Width="16" Source="D:\KursachCoffeCup\CoffeeCup\DesktopApp\Resurses\circle-64 (1).ico" />
-            <Image x:Name="cryl2" HorizontalAlignment="Right"  Height="16" Margin="0,5,33,0" VerticalAlignment="Top" Width="16" Source="D:\KursachCoffeCup\CoffeeCup\DesktopApp\Resurses\circle-64 (1).ico" />
-            <Image  Height="16"  HorizontalAlignment="Right" Margin="0,5,54,0" VerticalAlignment="Top" Width="16" Source="D:\KursachCoffeCup\CoffeeCup\DesktopApp\Resurses\circle-64 (2).ico" MouseDown="Image_MouseDown_2"/>
-            <materialDesign:PackIcon Kind="Menu" Foreground="White" Width="33" Height="28"   MouseLeftButtonDown="PackIcon_MouseLeftButtonDown" HorizontalAlignment="Left" />
+
+            <Image  Height="16"  HorizontalAlignment="Right" Margin="0,5,39,0" VerticalAlignment="Top" Width="16" Source="D:\KursachCoffeCup\CoffeeCup\DesktopApp\Resurses\circle-64 (2).ico" MouseDown="Image_MouseDown_2"/>
+            <materialDesign:PackIcon Kind="Menu" Foreground="White" Width="33" Height="28"  HorizontalAlignment="Left" />
         </Grid>
-        
+
         <StackPanel ScrollViewer.HorizontalScrollBarVisibility="Disabled"  x:Name="GridMenu" Width="250" HorizontalAlignment="Center"  Margin="0,0,0,-2" Grid.RowSpan="3" Background="#FF222222"   >
             <Image Height="142" Source="D:\KursachCoffeCup\CoffeeCup\DesktopApp\Resurses\CoffeeCupLogo10.png" RenderTransformOrigin="0.414,0.507" Stretch="Fill" Grid.Column="0" Grid.Row="0" />
             <ListView  ScrollViewer.HorizontalScrollBarVisibility="Disabled" Background="#FF222222" FontFamily="Champagne &amp; Limousines" FontSize="18" BorderBrush="#FF222222" Height="460"  >
@@ -80,7 +79,11 @@
 
 
         <Grid HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="3"  Height="569" VerticalAlignment="Top" Width="749">
-            <Frame  Name="MainFrame" HorizontalAlignment="Left" Height="569" Margin="-1,0,0,0" VerticalAlignment="Top" Width="750"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="180*"/>
+                <ColumnDefinition Width="569*"/>
+            </Grid.ColumnDefinitions>
+            <Frame  Name="MainFrame" HorizontalAlignment="Left" Height="571" VerticalAlignment="Center" Width="749" Grid.ColumnSpan="2"/>
 
         </Grid>
 

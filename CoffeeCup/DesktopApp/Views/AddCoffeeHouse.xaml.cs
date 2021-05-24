@@ -14,6 +14,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Text.RegularExpressions;
+using Microsoft.Win32;
+using System.IO;
 
 namespace DesktopApp.Views
 {
@@ -33,18 +35,24 @@ namespace DesktopApp.Views
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-           if(AddCoffeeHouseName.Text == "" || AddCoffeeHouseName.Text == " " || AddCoffeeHouseAddress.Text == "" || AddCoffeeHouseAddress.Text ==" ")
+            if (AddCoffeeHouseName.Text == "" || AddCoffeeHouseName.Text == " " || AddCoffeeHouseAddress.Text == "" || AddCoffeeHouseAddress.Text ==" ")
             {
                 MessageBox.Show("Некорректные данные");
                 return;
             }
-           
-    
+            else if(img_path == null)
+            {
+                MessageBox.Show("You need to upload image first");
+                return;
+            }
+
+
             await _coffeeHouseService.AddAsync(new Models.CoffeeHouse()
             {
                 CreatorId = _appUserService.UserId,
                 Name = AddCoffeeHouseName?.Text,
                 Address = AddCoffeeHouseAddress?.Text,
+                ImageSource = img_path,
                 
                 CoffeeItems = new List<Models.CoffeeItem>()
                 {
@@ -90,6 +98,22 @@ namespace DesktopApp.Views
         private void CoffeeItem_2_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private string img_path;
+        private void ToggleButton_Click(object sender, RoutedEventArgs e)
+        {
+            var openFileDialog = new OpenFileDialog();
+
+            openFileDialog.Title = "Select a picture";
+            openFileDialog.Filter = "All supported graphics|*.jpg;*.jpeg;*.png|" +
+                                 "JPEG (*.jpg;*.jpeg)|*.jpg;*.jpeg|" +
+                                 "Portable Network Graphic (*.png)|*.png";
+            if (openFileDialog.ShowDialog() == true)
+            {
+                imgCompany.Source = new BitmapImage(new Uri(openFileDialog.FileName));
+                img_path = openFileDialog.FileName;
+            }
         }
     }
 }

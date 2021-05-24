@@ -65,64 +65,64 @@ namespace DesktopApp.Views
         {
             Application.Current.Shutdown();
         }
-        private void Image_MouseDown_1(object sender, System.Windows.Input.MouseButtonEventArgs e)
-        {
+        //private void Image_MouseDown_1(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        //{
 
-            this.WindowState = WindowState.Maximized;
-            cryl1.Visibility = Visibility.Collapsed;
-            cryl2.Visibility = Visibility.Visible;
-            btAbout.Margin = new Thickness(0, 150, 0, 0);
-            flagFotMenu = true;
-            ButtonMenu.Margin = new Thickness(250, 0, 0, 0);
-            FooterMenu.Margin = new Thickness(250, 0, 0, 0);
-            GridMenu.Width = 250;
-            FooterMenu.Width = ActualWidth - 250;
-            flagOpOrCl = false;
-        }
+        //    this.WindowState = WindowState.Maximized;
+        //    cryl1.Visibility = Visibility.Collapsed;
+        //    cryl2.Visibility = Visibility.Visible;
+        //    btAbout.Margin = new Thickness(0, 150, 0, 0);
+        //    flagFotMenu = true;
+        //    ButtonMenu.Margin = new Thickness(250, 0, 0, 0);
+        //    FooterMenu.Margin = new Thickness(250, 0, 0, 0);
+        //    GridMenu.Width = 250;
+        //    FooterMenu.Width = ActualWidth - 250;
+        //    flagOpOrCl = false;
+        //}
 
-        private void cryl2_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
-        {
-            this.WindowState = WindowState.Normal;
-            cryl1.Visibility = Visibility.Visible;
-            cryl2.Visibility = Visibility.Collapsed;
-            btAbout.Margin = new Thickness(0, 72, 0, 0);
-            ButtonMenu.Margin = new Thickness(250, 0, 0, 0);
-            FooterMenu.Margin = new Thickness(250, 0, 0, 0);
-            GridMenu.Width = 250;
-            FooterMenu.Width = 750;
-            flagOpOrCl = false;
-            flagFotMenu = false;
-        }
+        //private void cryl2_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        //{
+        //    this.WindowState = WindowState.Normal;
+        //    cryl1.Visibility = Visibility.Visible;
+        //    cryl2.Visibility = Visibility.Collapsed;
+        //    btAbout.Margin = new Thickness(0, 72, 0, 0);
+        //    ButtonMenu.Margin = new Thickness(250, 0, 0, 0);
+        //    FooterMenu.Margin = new Thickness(250, 0, 0, 0);
+        //    GridMenu.Width = 250;
+        //    FooterMenu.Width = 750;
+        //    flagOpOrCl = false;
+        //    flagFotMenu = false;
+        //}
         private void LoadWindowNew(Page pageToLoad)
         {
             MainFrame.NavigationUIVisibility = System.Windows.Navigation.NavigationUIVisibility.Hidden;
             MainFrame.Content = pageToLoad;
         }
 
-        private void PackIcon_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
-        {
-            if (flagOpOrCl == false)
-            {
-                GridMenu.Width = 52;
-                ButtonMenu.Margin = new Thickness(60, 0, 0, 0);
-                flagOpOrCl = true;
-                FooterMenu.Margin = new Thickness(50, 0, 0, 0);
-                FooterMenu.Width = ActualWidth - 50;
-            }
-            else
-            {
-                ButtonMenu.Margin = new Thickness(250, 0, 0, 0);
-                FooterMenu.Margin = new Thickness(250, 0, 0, 0);
-                GridMenu.Width = 250;
-                flagOpOrCl = false;
-                if (flagFotMenu == false)
-                    FooterMenu.Width = 750;
-                else
-                    FooterMenu.Width = ActualWidth - 250;
+        //private void PackIcon_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        //{
+        //    if (flagOpOrCl == false)
+        //    {
+        //        GridMenu.Width = 52;
+        //        ButtonMenu.Margin = new Thickness(60, 0, 0, 0);
+        //        flagOpOrCl = true;
+        //        FooterMenu.Margin = new Thickness(50, 0, 0, 0);
+        //        FooterMenu.Width = ActualWidth - 50;
+        //    }
+        //    else
+        //    {
+        //        ButtonMenu.Margin = new Thickness(250, 0, 0, 0);
+        //        FooterMenu.Margin = new Thickness(250, 0, 0, 0);
+        //        GridMenu.Width = 250;
+        //        flagOpOrCl = false;
+        //        if (flagFotMenu == false)
+        //            FooterMenu.Width = 750;
+        //        else
+        //            FooterMenu.Width = ActualWidth - 250;
 
 
-            }
-        }
+        //    }
+        //}
 
         private void Image_MouseDown_2(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {

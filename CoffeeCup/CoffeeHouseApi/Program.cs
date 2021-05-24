@@ -20,18 +20,17 @@ namespace CoffeeHouseApi
                 .UseSqlite("DataSource=coffeeHouse.db")
                 .Options;
             var context = new Infrastructure.Contexts.CoffeeCupContext(options);
-            //if (context.Database.EnsureCreated())
+            if (context.Database.EnsureCreated())
             {
                 //var users = context.Users.ToList();
                 //var a = users.ToArray();
-                //var coffehouse = context.CoffeeHouses.ToList();
-                //var b = coffehouse.ToArray();
+                var coffehouse = context.CoffeeHouses.ToList();
+                var b = coffehouse.ToArray();
             }
             //var users = context.Users.ToList();
             //var user = users[0];
             //var admin = users[1];
             //var coff = new CoffeeHouse();
-            //coff.
             //var coffeeHouse = new CoffeeHouse
             //{
             //    CreatorId = admin.Id,
@@ -71,8 +70,8 @@ namespace CoffeeHouseApi
             //};
             //context.OrderedCoffees.Add(orderedCoffee);
             //context.SaveChanges();
-            
-                        CreateHostBuilder(args).Build().Run();
+
+            CreateHostBuilder(args).Build().Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

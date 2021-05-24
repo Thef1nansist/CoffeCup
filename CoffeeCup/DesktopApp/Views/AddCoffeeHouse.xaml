@@ -31,11 +31,14 @@
 
         <Label Content="Добавьте свою компанию" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="40" Margin="5,0,0,0" VerticalAlignment="Center" Width="300" FontFamily="Lucida Fax" FontWeight="Bold" FontStyle="Italic" FontSize="22"/>
         <Label Content="Ваше меню:" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="40" Margin="10,125,0,0" VerticalAlignment="Top" Width="300" FontFamily="Lucida Fax" FontWeight="Bold" FontStyle="Italic" FontSize="22"/>
-        <ToggleButton Grid.Column="1" Grid.Row="1"   Style="{StaticResource MaterialDesignActionAccentToggleButton}" ToolTip="MaterialDesignActionLightToggleButton" Margin="68,63,100,210" Background="DarkGray"  >
+        <ToggleButton Grid.Column="1" Grid.Row="1" Click="ToggleButton_Click"   Style="{StaticResource MaterialDesignActionAccentToggleButton}" ToolTip="MaterialDesignActionLightToggleButton" Margin="68,63,100,210" Background="DarkGray"  >
             <ToggleButton.Content>
                 <materialDesign:PackIcon Kind="Plus" Height="25" Foreground="White"  />
             </ToggleButton.Content>
         </ToggleButton>
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="140,100,0,10" Grid.ColumnSpan="2"  >
+            <Image x:Name="imgCompany" HorizontalAlignment="Left" Height="156" Width="220"/>
+        </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="190" Margin="45,40,0,0" Grid.ColumnSpan="2">
             <materialDesign:PackIcon Kind="Company" Width="20" Height="20" Foreground="{Binding ElementName=AddCoffeeHouseName, Path=BorderBrush}" VerticalAlignment="Bottom" Margin="0 0 0 4 "/>
@@ -48,6 +51,10 @@
         </StackPanel>
 
         <Grid   Grid.Row="1" Margin="0,152,0,0" Grid.ColumnSpan="3" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="107*"/>
+                <ColumnDefinition Width="13*"/>
+            </Grid.ColumnDefinitions>
             <Label Content="Название:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,4,0,0"/>
             <Label Content="Цена(со скидкой):" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="205,7,0,0"/>
             <TextBox x:Name="CoffeeItem_1" HorizontalAlignment="Left" Margin="10,91,0,0" Text="капучино" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
@@ -69,7 +76,7 @@
             <TextBox x:Name="CoffeeItem_4_Copy3" Text="Расстворимый" HorizontalAlignment="Left" Margin="10,193,0,0"  TextWrapping="Wrap"  VerticalAlignment="Top" Width="180"/>
             <TextBox x:Name="Price_CoffeeItem_4_Copy3" HorizontalAlignment="Left" Text="5" Margin="205,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
             <Label Content="руб." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="265,193,0,0"/>
-            <Button  x:Name="btnAddCompany"  Content="Создать" FontStyle="Italic"  BorderThickness="20, 20, 20, 20 " HorizontalAlignment="Left" Height="45"  VerticalAlignment="Top" Width="130" Background="#FFAA9584" Click="Button_Click" BorderBrush="#FFAA9584" Margin="370,94,0,0"/>
+            <Button  x:Name="btnAddCompany"  Content="Создать" FontStyle="Italic"  BorderThickness="20, 20, 20, 20 " HorizontalAlignment="Left" Height="45"  VerticalAlignment="Top" Width="130" Background="#FFAA9584" Click="Button_Click" BorderBrush="#FFAA9584" Margin="340,177,0,0"/>
         </Grid>
 
     </Grid>

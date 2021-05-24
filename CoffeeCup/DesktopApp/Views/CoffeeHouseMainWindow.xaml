@@ -22,8 +22,12 @@
             <ColumnDefinition Width="25*" />
         </Grid.ColumnDefinitions>
 
+        <Image Grid.Column="3" Grid.Row="0" HorizontalAlignment="Right" Height="16" Margin="0,5,12,0" VerticalAlignment="Top" Width="16" Source="D:\KursachCoffeCup\CoffeeCup\DesktopApp\Resurses\circle-64.ico" MouseDown="Image_MouseDown" Cursor="Arrow"/>
+
+        <Image  Grid.Column="3" Grid.Row="0" Height="16"  HorizontalAlignment="Right" Margin="0,5,39,0" VerticalAlignment="Top" Width="16" Source="D:\KursachCoffeCup\CoffeeCup\DesktopApp\Resurses\circle-64 (2).ico" MouseDown="Image_MouseDown_2"/>
+
         <StackPanel Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" >
-            <Button  x:Name="MyCofebt" Content="Мои кофейни" FontStyle="Italic"  BorderThickness="20, 20, 20, 20 " Height="45" Width="130" Background="#FFAA9584" Margin="35,110,0,0"  BorderBrush="#FFAA9584"/>
+            <Button  x:Name="MyCofebt" Content="Мои кофейни" FontStyle="Italic"  BorderThickness="20, 20, 20, 20 " Height="45" Width="130" Background="#FFAA9584" Margin="35,110,0,0" Click="MyCofebt_Click"  BorderBrush="#FFAA9584"/>
             <Button x:Name="Statisticbt" Content="Статистика" FontStyle="Italic"  BorderThickness="20, 20, 20, 20 " HorizontalAlignment="Left" Height="45" Margin="48,20,0,0" VerticalAlignment="Top" Width="130" Background="#FFAA9584"  Click="Statisticbt_Click" BorderBrush="#FFAA9584"/>
             <Button x:Name="Popularbt" Content="Рейтинг" FontStyle="Italic"  BorderThickness="20, 20, 20, 20 " Height="45" Width="130" Background="#FFAA9584" Margin="35,20,0,0"  BorderBrush="#FFAA9584" Click="Popularbt_Click" />
         </StackPanel>

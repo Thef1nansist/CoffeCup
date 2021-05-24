@@ -111,6 +111,18 @@ namespace BusinessLogic.Services
             return _mapper.Map<IEnumerable<CoffeeHouse>>(entities);
         }
 
+        public async Task<IEnumerable<CoffeeHouse>> GetByCoffeeHousesIdUser(string userId)
+        {
+            using var context = _contextFactory.CreateDbContext();
+
+            var entities = await context.CoffeeHouses
+                .Where(x => x.CreatorId == userId)
+                .AsNoTracking()
+                .ToListAsync()
+                .ConfigureAwait(false);
+            return _mapper.Map<IEnumerable<CoffeeHouse>>(entities);
+        }
+
         public async Task<IEnumerable<CoffeeHouse>> GetAllAsync()
         {
             using var context = _contextFactory.CreateDbContext(); //для работы с любыми данными юзать using

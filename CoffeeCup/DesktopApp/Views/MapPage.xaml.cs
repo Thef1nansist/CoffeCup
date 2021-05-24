@@ -42,31 +42,31 @@ namespace DesktopApp.Views
 
         }
 
-        private void SearchAddress()
-        {
+        //private void SearchAddress()
+        //{
 
-            string userIp = "127.0.0.1";
-            string request = "http://dev.virtualearth.net/REST/v1/Locations?addressLine={searchfields.}&userLocation={userLocation}&userIp={userIp}&key={BingMapsKey}";
-            string url = string.Format(request, Uri.EscapeDataString(searchfields.Text));
+        //    string userIp = "127.0.0.1";
+        //    string request = "http://dev.virtualearth.net/REST/v1/Locations?addressLine={searchfields.}&userLocation={userLocation}&userIp={userIp}&key={BingMapsKey}";
+        //    string url = string.Format(request, Uri.EscapeDataString(searchfields.Text));
 
-            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
+        //    HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
 
-            WebResponse response = req.GetResponse();
+        //    WebResponse response = req.GetResponse();
 
-            Stream stream = response.GetResponseStream();
+        //    Stream stream = response.GetResponseStream();
 
-            StreamReader streamReader = new StreamReader(stream);
+        //    StreamReader streamReader = new StreamReader(stream);
 
-            string responsereader = streamReader.ReadToEnd();
+        //    string responsereader = streamReader.ReadToEnd();
 
-            response.Close();
+        //    response.Close();
 
-            JsonSerializer.Deserialize
+        //    JsonSerializer.Deserialize
 
-            //GeoLocation nasd = new GeoLocation();
+        //    //GeoLocation nasd = new GeoLocation();
 
 
-        }
+        //}
 
         //private string SearchKeywordLocation(string keywordLocation)
         //{

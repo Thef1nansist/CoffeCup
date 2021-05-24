@@ -5,11 +5,11 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:DesktopApp.Views" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="571" d:DesignWidth="749"
       Title="MyItemsCoffeePage">
 
     <Page.Background>
-        <ImageBrush ImageSource="D:\KursachCoffeCup\CoffeeCup\DesktopApp\Resurses\listcoffee3.jpg"/>
+        <ImageBrush Stretch="UniformToFill" ImageSource="D:\KursachCoffeCup\CoffeeCup\DesktopApp\Resurses\listcoffee3.jpg"/>
     </Page.Background>
     <Grid Initialized=" GetCoffeeItemByUserAsync">
         <Grid.ColumnDefinitions>
@@ -39,15 +39,15 @@
                             <materialDesign:TransitioningContent.OpeningEffects>
                                 <materialDesign:TransitionEffect  Kind="SlideInFromRight"/>
                             </materialDesign:TransitioningContent.OpeningEffects>
-                            <materialDesign:Card Height="250" Width="250">
+                            <materialDesign:Card Background="#6e2c16" Height="110" Width="100">
                                 <Grid HorizontalAlignment="Center">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="5*"></RowDefinition>
                                         <RowDefinition></RowDefinition>
                                     </Grid.RowDefinitions>
                                     <StackPanel Margin="0 10 0 0 " HorizontalAlignment="Center" Grid.Row="0">
-                                        <TextBlock Margin="0 0 0 10" HorizontalAlignment="Center" Foreground="{DynamicResource PrimaryHueDarkBrush}" FontWeight="Bold" Text="{Binding Name}"></TextBlock>
-                                        <TextBlock Margin="0 0 0 10" HorizontalAlignment="Center" Foreground="{DynamicResource PrimaryHueDarkBrush}" FontWeight="Bold" Text="{Binding Price}"></TextBlock>
+                                        <TextBlock Margin="0 0 0 10" HorizontalAlignment="Center" Foreground="White" FontWeight="Bold" Text="{Binding Name}"></TextBlock>
+                                        <TextBlock Margin="0 0 0 10" HorizontalAlignment="Center" Foreground="White" FontWeight="Bold" Text="{Binding Price}"></TextBlock>
                                         <!--<Image Height="150" Width="180" Source="{Binding ImageLink}"></Image>-->
                                     </StackPanel>
                                 </Grid>

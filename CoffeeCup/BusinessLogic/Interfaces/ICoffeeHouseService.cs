@@ -16,5 +16,7 @@ namespace BusinessLogic.Interfaces
         Task<IEnumerable<CoffeeHouse>> GetPopularCoffeeHouses();
 
         Task<List<CoffeeItem>> GetCoffeeItemByUserAsync(string userId);
+
+        Task<IEnumerable<CoffeeHouse>> GetByCoffeeHousesIdUser(string userId);
     }
 }

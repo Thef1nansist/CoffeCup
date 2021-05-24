@@ -140,3 +140,5 @@ D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\DesktopApp.genr
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\DesktopApp.csprojAssemblyReference.cache
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\MyItemsCoffeePage.g.cs
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\MyItemsCoffeePage.baml
+D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\MyCoffeeHousesPage.g.cs
+D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\MyCoffeeHousesPage.baml

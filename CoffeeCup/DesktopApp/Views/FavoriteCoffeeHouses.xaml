@@ -30,10 +30,10 @@
             </ListView.ItemTemplate>
         </ListView>
         <StackPanel Grid.Column="1" DataContext="{Binding SelectedFavoriteCoffeeHouse}">
-
-            <TextBlock Foreground="White" Text="{Binding Path=CoffeeHouse.Name, UpdateSourceTrigger=PropertyChanged}" />
-            <TextBlock Foreground="White" Text="{Binding Path=CoffeeHouse.Address, UpdateSourceTrigger=PropertyChanged}" />
-
+            <Image Width="100" Height="100" Stretch="UniformToFill" Source="{Binding Path=CoffeeHouse.ImageSource, UpdateSourceTrigger=PropertyChanged}"/>
+            <TextBlock HorizontalAlignment="Center" Foreground="White" Text="{Binding Path=CoffeeHouse.Name, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBlock HorizontalAlignment="Center" Foreground="White" Text="{Binding Path=CoffeeHouse.Address, UpdateSourceTrigger=PropertyChanged}" />
+           
         </StackPanel>
     </Grid>
 </Page>

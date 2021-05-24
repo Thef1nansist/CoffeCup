@@ -16,5 +16,7 @@ namespace DesktopApp.Interfaces
         Task<IEnumerable<CoffeeHouse>> GetPopularCoffeeHouses();
 
         Task<List<CoffeeItem>> GetCoffeeItemByUserAsync(string userId);
+
+        Task<List<CoffeeHouse>> GetByCoffeeHousesIdUser();
     }
 }

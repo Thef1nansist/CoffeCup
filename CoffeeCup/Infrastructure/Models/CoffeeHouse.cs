@@ -7,6 +7,8 @@ namespace Infrastructure.Models
         public int Id { get; set; }
         public string CreatorId { get; set; }
         public string Name { get; set; }
+
+        public string ImageSource { get; set; }
         public string Address { get; set; }
         public AppUser Creator { get; set; }
         public ICollection<CoffeeItem> CoffeeItems { get; set; }

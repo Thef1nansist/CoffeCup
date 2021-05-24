@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\App.xaml
-1440506393
+15-2000406164
 11413424753
-4450694514
+461432715174
 2301100643395
-MainWindow.xaml;Views\AboutDevelopersPage.xaml;Views\AddCoffeeHouse.xaml;Views\AdminStatistics.xaml;Views\CoffeeHouseMainWindow.xaml;Views\CoffeeHousesView.xaml;Views\Dashboard.xaml;Views\FavoriteCoffeeHouses.xaml;Views\MapPage.xaml;Views\MyItemsCoffeePage.xaml;Views\PopularCoffeeHouses.xaml;Views\RegWindowCoffeeHouse.xaml;Views\StatisticControll.xaml;Views\UserStatistics.xaml;
+MainWindow.xaml;Views\AboutDevelopersPage.xaml;Views\AddCoffeeHouse.xaml;Views\AdminStatistics.xaml;Views\CoffeeHouseMainWindow.xaml;Views\CoffeeHousesView.xaml;Views\Dashboard.xaml;Views\FavoriteCoffeeHouses.xaml;Views\MapPage.xaml;Views\MyCoffeeHousesPage.xaml;Views\MyItemsCoffeePage.xaml;Views\PopularCoffeeHouses.xaml;Views\RegWindowCoffeeHouse.xaml;Views\StatisticControll.xaml;Views\UserStatistics.xaml;
 
-False
+True
 

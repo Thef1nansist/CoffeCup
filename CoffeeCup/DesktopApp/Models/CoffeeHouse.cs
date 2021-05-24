@@ -10,6 +10,8 @@ namespace DesktopApp.Models
         public string Name { get; set; }
         public string Address { get; set; }
 
+        public string ImageSource { get; set; }
+
         public AppUser Creator { get; set; }
         public List<CoffeeItem> CoffeeItems { get; set; }
     }

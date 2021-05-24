@@ -59,5 +59,20 @@ namespace DesktopApp.Views
         {
             this.DragMove();
         }
+        private void Image_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void Image_MouseDown_2(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void MyCofebt_Click(object sender, RoutedEventArgs e)
+        {
+            MyCoffeeHousesPage myCoffeeHousesPage = new MyCoffeeHousesPage(_coffeeHouseService);
+            LoadWindowNew(myCoffeeHousesPage);
+        }
     }
 }

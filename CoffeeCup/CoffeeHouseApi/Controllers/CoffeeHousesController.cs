@@ -58,6 +58,17 @@ namespace CoffeeHouseApi.Controllers
             return Ok(rezult);
         }
 
+        [HttpGet("GetByCoffeeHousesIdUser")]
+
+        public async Task<IActionResult> GetByCoffeeHousesIdUser([FromQuery] string userId)
+        {
+            var rezult = await _coffeeHouseService
+                .GetByCoffeeHousesIdUser(userId)
+                .ConfigureAwait(false);
+
+            return Ok(rezult);
+        }
+
         // GET api/<CoffeeHousesController>/5
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)

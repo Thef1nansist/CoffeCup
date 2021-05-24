@@ -31,6 +31,9 @@
     <Compile Update="Views\MapPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\MyCoffeeHousesPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\MyItemsCoffeePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -73,6 +76,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\MapPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\MyCoffeeHousesPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\MyItemsCoffeePage.xaml">

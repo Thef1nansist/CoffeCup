@@ -93,6 +93,21 @@ namespace DesktopApp.Services
             return res;
         }
 
+        public async Task<List<CoffeeHouse>> GetByCoffeeHousesIdUser()
+        {
+            var request = new HttpRequestMessage(HttpMethod.Get, $"/api/coffeehouses/GetByCoffeeHousesIdUser?userId={_appUserService.UserId}");
+
+            using var client = _httpClientFactory.CreateClient("CoffeeHouseApi");
+
+            var response = await client.SendAsync(request);
+            await using var responseStream = await response.Content.ReadAsStreamAsync();
+            var res = await JsonSerializer.DeserializeAsync<List<CoffeeHouse>>(responseStream, new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            });
+            return res;
+        }
+
         public async Task<IEnumerable<CoffeeHouse>> GetPopularCoffeeHouses()
         {
             var request = new HttpRequestMessage(HttpMethod.Get, "/api/coffeehouses/GetPopularCoffeeHouses");

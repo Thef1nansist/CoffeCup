@@ -48,7 +48,7 @@
                                     </StackPanel>
                                     <TextBlock  Text="{Binding Path=Address}" Opacity="0.7"/>
                                 </StackPanel>
-                                <Image HorizontalAlignment="Right" Width="50" Height="50" Source="D:\KursachCoffeCup\CoffeeCup\DesktopApp\Resurses\me.jpg" Stretch="UniformToFill" />
+                                <Image HorizontalAlignment="Right" Width="50" Height="50" Source="{Binding Path=ImageSource}" Stretch="UniformToFill" />
                             </Grid>
                         </Border>
                     </DataTemplate>
