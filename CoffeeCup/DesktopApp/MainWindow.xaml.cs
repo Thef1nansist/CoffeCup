@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
@@ -56,8 +57,6 @@ namespace DesktopApp
             AccessToken = e.Uri.Fragment.Split('&')[0].Replace("#access_token=", "");
         }
 
-        
-
         private async void InitData(object sender, System.EventArgs e)
         {
             var users = await _userService.GetAsync();
@@ -69,6 +68,11 @@ namespace DesktopApp
 
         private async void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            if (!ValidationLog(UserName.Text) && !ValidationLog(Password.Password))
+            {
+                MessageBox.Show("Неверный логин/пароль");
+                return;
+            }
             var result = await _userService.LoginAsync(UserName.Text, Password.Password);
 
             if (result.Item1)
@@ -90,6 +94,16 @@ namespace DesktopApp
                 MessageBox.Show("Неверный логин/пароль");
             }
 
+        }
+
+        private bool ValidationLog(string str)
+        {
+            string patternW = @"\w+";
+            if (!Regex.IsMatch(str, patternW, RegexOptions.IgnoreCase))
+            {
+                return false;
+            }
+            return true;
         }
 
         private void RegPage_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

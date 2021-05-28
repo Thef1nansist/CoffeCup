@@ -142,3 +142,7 @@ D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\MyItemsCo
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\MyCoffeeHousesPage.g.cs
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\Views\MyCoffeeHousesPage.baml
 D:\KursachCoffeCup\CoffeeCup\DesktopApp\obj\Debug\net5.0-windows\DesktopApp.csproj.AssemblyReference.cache
+D:\KursachCoffeCup\CoffeeCup\DesktopApp\bin\Debug\net5.0-windows\Microsoft.DotNet.PlatformAbstractions.dll
+D:\KursachCoffeCup\CoffeeCup\DesktopApp\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyModel.dll
+D:\KursachCoffeCup\CoffeeCup\DesktopApp\bin\Debug\net5.0-windows\Microsoft.Extensions.PlatformAbstractions.dll
+D:\KursachCoffeCup\CoffeeCup\DesktopApp\bin\Debug\net5.0-windows\Nancy.dll

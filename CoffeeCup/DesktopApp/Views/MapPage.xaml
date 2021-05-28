@@ -25,9 +25,7 @@
             <Grid DataContext="{Binding SelectedCoffeeHouse}">
                 <TextBox Name ="searchfields"  Text="{Binding Path=Address, UpdateSourceTrigger=PropertyChanged}" Background="White" FontSize="16" Padding="20 0 25 0"/>
                 <materialDesign:PackIcon Kind="MapMarker" VerticalAlignment="Center" Margin="2"/>
-                <Button HorizontalAlignment="Right" Style="{StaticResource MaterialDesignFlatButton}">
-                    <materialDesign:PackIcon Kind="Search"/>
-                </Button>
+               
             </Grid>
 
             <ListBox x:Name="listOfCoffeeHouses"  ItemsSource="{Binding CoffeeHouses}"
@@ -36,7 +34,7 @@
                     <DataTemplate>
                         <Border BorderBrush="LightGray" BorderThickness="0 0 0 1" Width="260" >
                             <Grid Height="50" >
-                                <StackPanel  Height="50">
+                                <StackPanel MouseLeftButtonDown="StackPanel_MouseLeftButtonDown"  Height="50">
                                     <TextBlock  Text="{Binding Path=Name}"/>
                                     <StackPanel Orientation="Horizontal">
                                         <TextBlock Text="4,5" Foreground="#DDFF6F0B" Margin="1" FontSize="10"/>
@@ -56,11 +54,11 @@
 
             </ListBox>
         </StackPanel>
-        <m:Map Name="MyMap" CredentialsProvider="AttsGkqIHCOIEA11KtQZDphl5bi8lppin64jeg-ZOOhiS4cdHA_EXJwHSbyZi4Xo" Mode="Road" Grid.Column="1" Grid.Row="1" ZoomLevel="16" Center="55.5570304,27.3306103">
-            <Canvas
-        m:MapLayer.Position="-23.1870304,-50.6606103"
+        <m:Map Name="MyMap" CredentialsProvider="AttsGkqIHCOIEA11KtQZDphl5bi8lppin64jeg-ZOOhiS4cdHA_EXJwHSbyZi4Xo" Mode="Road" Grid.Column="1" Grid.Row="1" ZoomLevel="12" Center="53.8999267, 27.5502278">
+            <Canvas x:Name="canvasMarker"
+        m:MapLayer.Position="53.8999267, 27.5502278"
         m:MapLayer.PositionOrigin="BottomCenter" Width="30" Height="30">
-                <materialDesign:PackIcon Kind="MapMarker" Width="30" Height="30" Foreground="#FF3C3C3C"/>
+                <materialDesign:PackIcon Name="MapMark" Kind="MapMarker" Width="40"  Height="40" Foreground="#FF3C3C3C"/>
             </Canvas>
         </m:Map>
 

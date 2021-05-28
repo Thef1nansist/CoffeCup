@@ -161,6 +161,7 @@ namespace Infrastructure.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     CreatorId = table.Column<string>(type: "TEXT", nullable: true),
                     Name = table.Column<string>(type: "TEXT", nullable: true),
+                    ImageSource = table.Column<string>(type: "TEXT", nullable: true),
                     Address = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>

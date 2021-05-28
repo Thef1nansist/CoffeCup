@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(CoffeeCupContext))]
-    [Migration("20210524204056_first")]
+    [Migration("20210528204911_first")]
     partial class first
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -95,6 +95,9 @@ namespace Infrastructure.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("CreatorId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ImageSource")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Name")

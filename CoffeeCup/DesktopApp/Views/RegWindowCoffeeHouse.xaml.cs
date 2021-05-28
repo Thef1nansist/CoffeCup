@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -48,7 +49,7 @@ namespace DesktopApp.Views
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
 
-            if (UserName.Text == "" || Password.Text == "" || UserName.Text.Length < 4 || Password.Text.Length < 4)
+            if  (!ValidationReg(UserName.Text) || !ValidationReg(Password.Text) || UserName.Text.Length < 4 || Password.Text.Length < 4)
             {
                 MessageBox.Show("Некорректное значение полей");
                 return;
@@ -58,6 +59,7 @@ namespace DesktopApp.Views
             if (asd)
             {
                 MessageBox.Show("Аккаунт создан!");
+
             }
             else
             {
@@ -80,6 +82,15 @@ namespace DesktopApp.Views
         private void X_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+        private bool ValidationReg(string str)
+        {
+            string patternW = @"\w+";
+            if (!Regex.IsMatch(str, patternW, RegexOptions.IgnoreCase))
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

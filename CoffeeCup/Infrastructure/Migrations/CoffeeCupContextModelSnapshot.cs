@@ -95,6 +95,9 @@ namespace Infrastructure.Migrations
                     b.Property<string>("CreatorId")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("ImageSource")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Name")
                         .HasColumnType("TEXT");
 

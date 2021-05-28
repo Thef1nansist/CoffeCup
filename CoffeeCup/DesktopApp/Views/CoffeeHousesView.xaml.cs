@@ -49,6 +49,13 @@ namespace DesktopApp.Views
         {
             var context = (CoffeeHouseViewModel)DataContext;
 
+            if(context.SelectedCoffeeHouse == null)
+            {
+                MessageBox.Show("Выберите кофейню!");
+                return;
+            }    
+
+
             if (await _favoriteService.GetSameFavoritesCoffeeHouses(_appUserService.UserId, context.SelectedCoffeeHouse.Id))
                 return;
 
