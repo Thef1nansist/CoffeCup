@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BusinessLogic.Configs.BusinessLogicServiceCollection" Collapsed="true">
+    <Position X="6.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Configs\BusinessLogicServiceCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLogic.Configs.BusinessProfileMappingProfile" Collapsed="true">
+    <Position X="8.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Configs\BusinessProfileMappingProfile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLogic.Models.AppUser" Collapsed="true">
+    <Position X="3.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACCAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\AppUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLogic.Models.CoffeeHouse" Collapsed="true">
+    <Position X="3.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAEAACAAEAAAQAACAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\CoffeeHouse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLogic.Models.CoffeeItem" Collapsed="true">
+    <Position X="6.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAAAAAAAAAQQAACAAAAAAABAAAAAIAAA=</HashCode>
+      <FileName>Models\CoffeeItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLogic.Models.Favorite" Collapsed="true">
+    <Position X="8.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAAAAAAAAAAAQgAACAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Models\Favorite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLogic.Models.GetCoffeeHousesByAdmin" Collapsed="true">
+    <Position X="5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\GetCoffeeHousesByAdmin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLogic.Models.GetOrderedCoffeeByUser" Collapsed="true">
+    <Position X="6.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\GetOrderedCoffeeByUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLogic.Models.OrderedCoffee" Collapsed="true">
+    <Position X="8.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAAAAAAAAAAAAkIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\OrderedCoffee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLogic.Services.AppUserService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgCABAEAAAAAAABAAIABIAAAAAACCAAAAAEAAIAAAAA=</HashCode>
+      <FileName>Services\AppUserService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BusinessLogic.Services.CoffeeHouseService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAIAAAAAAAAAAABBAAkIAAAQAAgAAAAAAAAAIAE=</HashCode>
+      <FileName>Services\CoffeeHouseService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BusinessLogic.Services.FavoriteService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAIAAAAAAAAAAAAABBAAEJAACAAAgAAgAAAAAAIAA=</HashCode>
+      <FileName>Services\FavoriteService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="BusinessLogic.Interfaces.IAppUserService" Collapsed="true">
+    <Position X="3.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgCAAAEAAAAAAABAAAAAIAAAAAAACAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Interfaces\IAppUserService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BusinessLogic.Interfaces.ICoffeeHouseService" Collapsed="true">
+    <Position X="5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAIAAAAAAAAAAABAAAkAAAAQAAgAAAAAAAAAIAE=</HashCode>
+      <FileName>Interfaces\ICoffeeHouseService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BusinessLogic.Interfaces.IFavoriteService" Collapsed="true">
+    <Position X="6.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAABAAAEBAACAAAgAAgAAAAAAIAA=</HashCode>
+      <FileName>Interfaces\IFavoriteService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

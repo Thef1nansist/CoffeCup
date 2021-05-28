@@ -1,6 +1,6 @@
 ﻿namespace DesktopApp.Helper
 {
-     class PageInfo
+    public class PageInfo
     {
        
         public int Page { get; set; }

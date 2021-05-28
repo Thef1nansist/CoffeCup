@@ -19,7 +19,6 @@ D:\KursachCoffeCup\CoffeeCup\Infrastructure\bin\Debug\net5.0\Infrastructure.runt
 D:\KursachCoffeCup\CoffeeCup\Infrastructure\bin\Debug\net5.0\Infrastructure.dll
 D:\KursachCoffeCup\CoffeeCup\Infrastructure\bin\Debug\net5.0\ref\Infrastructure.dll
 D:\KursachCoffeCup\CoffeeCup\Infrastructure\bin\Debug\net5.0\Infrastructure.pdb
-D:\KursachCoffeCup\CoffeeCup\Infrastructure\obj\Debug\net5.0\Infrastructure.csprojAssemblyReference.cache
 D:\KursachCoffeCup\CoffeeCup\Infrastructure\obj\Debug\net5.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
 D:\KursachCoffeCup\CoffeeCup\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfoInputs.cache
 D:\KursachCoffeCup\CoffeeCup\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfo.cs
@@ -28,3 +27,4 @@ D:\KursachCoffeCup\CoffeeCup\Infrastructure\obj\Debug\net5.0\Infrastructure.dll
 D:\KursachCoffeCup\CoffeeCup\Infrastructure\obj\Debug\net5.0\ref\Infrastructure.dll
 D:\KursachCoffeCup\CoffeeCup\Infrastructure\obj\Debug\net5.0\Infrastructure.pdb
 D:\KursachCoffeCup\CoffeeCup\Infrastructure\obj\Debug\net5.0\Infrastructure.genruntimeconfig.cache
+D:\KursachCoffeCup\CoffeeCup\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.AssemblyReference.cache

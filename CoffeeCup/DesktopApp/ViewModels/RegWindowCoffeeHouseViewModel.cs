@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DesktopApp.ViewModels
 {
-    class RegWindowCoffeeHouseViewModel : INotifyPropertyChanged
+   public class RegWindowCoffeeHouseViewModel : INotifyPropertyChanged
     {
         private AppUser selectedAppUser;
         private ObservableCollection<AppUser> appUsers;

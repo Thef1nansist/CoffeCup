@@ -280,7 +280,6 @@ D:\KursachCoffeCup\CoffeeCup\CoffeeHouseApi\bin\Debug\net5.0\BusinessLogic.dll
 D:\KursachCoffeCup\CoffeeCup\CoffeeHouseApi\bin\Debug\net5.0\Infrastructure.dll
 D:\KursachCoffeCup\CoffeeCup\CoffeeHouseApi\bin\Debug\net5.0\BusinessLogic.pdb
 D:\KursachCoffeCup\CoffeeCup\CoffeeHouseApi\bin\Debug\net5.0\Infrastructure.pdb
-D:\KursachCoffeCup\CoffeeCup\CoffeeHouseApi\obj\Debug\net5.0\CoffeeHouseApi.csprojAssemblyReference.cache
 D:\KursachCoffeCup\CoffeeCup\CoffeeHouseApi\obj\Debug\net5.0\CoffeeHouseApi.GeneratedMSBuildEditorConfig.editorconfig
 D:\KursachCoffeCup\CoffeeCup\CoffeeHouseApi\obj\Debug\net5.0\CoffeeHouseApi.AssemblyInfoInputs.cache
 D:\KursachCoffeCup\CoffeeCup\CoffeeHouseApi\obj\Debug\net5.0\CoffeeHouseApi.AssemblyInfo.cs
@@ -295,3 +294,4 @@ D:\KursachCoffeCup\CoffeeCup\CoffeeHouseApi\obj\Debug\net5.0\CoffeeHouseApi.dll
 D:\KursachCoffeCup\CoffeeCup\CoffeeHouseApi\obj\Debug\net5.0\ref\CoffeeHouseApi.dll
 D:\KursachCoffeCup\CoffeeCup\CoffeeHouseApi\obj\Debug\net5.0\CoffeeHouseApi.pdb
 D:\KursachCoffeCup\CoffeeCup\CoffeeHouseApi\obj\Debug\net5.0\CoffeeHouseApi.genruntimeconfig.cache
+D:\KursachCoffeCup\CoffeeCup\CoffeeHouseApi\obj\Debug\net5.0\CoffeeHouseApi.csproj.AssemblyReference.cache

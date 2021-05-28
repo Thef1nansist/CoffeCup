@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DesktopApp.ViewModels
 {
-    class StatisticControllViewModel : INotifyPropertyChanged
+   public class StatisticControllViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
     }

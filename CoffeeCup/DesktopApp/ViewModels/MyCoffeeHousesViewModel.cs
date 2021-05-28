@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DesktopApp.ViewModels
 {
-    class MyCoffeeHousesViewModel :INotifyPropertyChanged
+   public class MyCoffeeHousesViewModel :INotifyPropertyChanged
     {
         private ObservableCollection<CoffeeHouse> coffeeHouses;
 

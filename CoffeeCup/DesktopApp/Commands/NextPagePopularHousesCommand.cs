@@ -9,7 +9,7 @@ using System.Windows.Input;
 
 namespace DesktopApp.Commands
 {
-    class NextPagePopularHousesCommand :ICommand
+   public class NextPagePopularHousesCommand :ICommand
     {
         private PopularCoffeeHousesViewModel _viewModel;
 

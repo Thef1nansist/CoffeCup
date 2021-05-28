@@ -19,7 +19,6 @@ D:\KursachCoffeCup\CoffeeCup\BusinessLogic\bin\Debug\net5.0\ref\BusinessLogic.dl
 D:\KursachCoffeCup\CoffeeCup\BusinessLogic\bin\Debug\net5.0\BusinessLogic.pdb
 D:\KursachCoffeCup\CoffeeCup\BusinessLogic\bin\Debug\net5.0\Infrastructure.dll
 D:\KursachCoffeCup\CoffeeCup\BusinessLogic\bin\Debug\net5.0\Infrastructure.pdb
-D:\KursachCoffeCup\CoffeeCup\BusinessLogic\obj\Debug\net5.0\BusinessLogic.csprojAssemblyReference.cache
 D:\KursachCoffeCup\CoffeeCup\BusinessLogic\obj\Debug\net5.0\BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
 D:\KursachCoffeCup\CoffeeCup\BusinessLogic\obj\Debug\net5.0\BusinessLogic.AssemblyInfoInputs.cache
 D:\KursachCoffeCup\CoffeeCup\BusinessLogic\obj\Debug\net5.0\BusinessLogic.AssemblyInfo.cs
@@ -28,3 +27,4 @@ D:\KursachCoffeCup\CoffeeCup\BusinessLogic\obj\Debug\net5.0\BusinessLogic.csproj
 D:\KursachCoffeCup\CoffeeCup\BusinessLogic\obj\Debug\net5.0\BusinessLogic.dll
 D:\KursachCoffeCup\CoffeeCup\BusinessLogic\obj\Debug\net5.0\ref\BusinessLogic.dll
 D:\KursachCoffeCup\CoffeeCup\BusinessLogic\obj\Debug\net5.0\BusinessLogic.pdb
+D:\KursachCoffeCup\CoffeeCup\BusinessLogic\obj\Debug\net5.0\BusinessLogic.csproj.AssemblyReference.cache

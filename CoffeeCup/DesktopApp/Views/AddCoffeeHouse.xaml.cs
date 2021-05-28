@@ -35,6 +35,7 @@ namespace DesktopApp.Views
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
+
             if (AddCoffeeHouseName.Text == "" || AddCoffeeHouseName.Text == " " || AddCoffeeHouseAddress.Text == "" || AddCoffeeHouseAddress.Text ==" ")
             {
                 MessageBox.Show("Некорректные данные");

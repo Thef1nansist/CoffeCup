@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesktopApp.Commands.NextPagePopularHousesCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQQAEAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\NextPagePopularHousesCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesktopApp.Helper.PageInfo" Collapsed="true">
+    <Position X="10" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Extensions\Helper\PageInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesktopApp.Helper.Paging" Collapsed="true">
+    <Position X="11.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACiAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Extensions\Helper\Paging.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesktopApp.Extensions.JsonSerializerExtensions" Collapsed="true">
+    <Position X="4.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Extensions\JsonSerializerExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesktopApp.Models.AddFavoriteCoffeeHouse" Collapsed="true">
+    <Position X="6.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\AddFavoriteCoffeeHouse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesktopApp.Models.AppUser" Collapsed="true">
+    <Position X="13.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAACAQAAAAAAAAA=</HashCode>
+      <FileName>Models\AppUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesktopApp.Models.CoffeeHouse" Collapsed="true">
+    <Position X="4.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAEAACAAEAAAQAAAAAAAACEAAAAAAAAAA=</HashCode>
+      <FileName>Models\CoffeeHouse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesktopApp.Models.CoffeeItem" Collapsed="true">
+    <Position X="13.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAAAAAAAAAQQAAAAAAAAAABAAAAAIAAA=</HashCode>
+      <FileName>Models\CoffeeItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesktopApp.Models.FavoriteCoffeeHouse" Collapsed="true">
+    <Position X="6.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAAAAAAAAAAAQgAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Models\FavoriteCoffeeHouse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesktopApp.Models.GetCoffeeHouseByAdmin" Collapsed="true">
+    <Position X="13.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\GetCoffeeHouseByAdmin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesktopApp.Models.GetOrderedCoffeeByUser" Collapsed="true">
+    <Position X="3" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\GetOrderedCoffeeByUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesktopApp.Models.OrderedCoffee" Collapsed="true">
+    <Position X="8.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAAAAAAAAAAAAkIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\OrderedCoffee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesktopApp.Models.AdminStatisticsFlyotMenuItem" Collapsed="true">
+    <Position X="10" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Views\AdminStatisticsFlyotMenuItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesktopApp.Services.AppUserService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgCAAAAAAAAAAAAAAAAAAAgAiAACAAAAAAAAIIAAAAA=</HashCode>
+      <FileName>Services\AppUserService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesktopApp.Services.CoffeeHouseService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAIAIAAAAAAAAAAAAAAAkAAAAQAAAAAAAAIAAAAAE=</HashCode>
+      <FileName>Services\CoffeeHouseService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesktopApp.Services.FavoriteService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAIAAAAAAAAAAAAAAAAAABAACAAgAAAAAAAAQAAAA=</HashCode>
+      <FileName>Services\FavoriteService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesktopApp.ViewModels.CoffeeHouseViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAIoAAAAAAAABAAAAAQAAA=</HashCode>
+      <FileName>ViewModels\CoffeeHouseViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesktopApp.ViewModels.FavoriteCoffeeHouseViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAIAAAAAAAgAQAAAAEABAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\FavoriteCoffeeHouseViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesktopApp.ViewModels.MainWindowViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAgBAAIAAQAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\MainWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesktopApp.ViewModels.MyCoffeeHousesViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAABAAAAAQAAA=</HashCode>
+      <FileName>ViewModels\MyCoffeeHousesViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesktopApp.ViewModels.MyItemsCoffeePageViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>ViewModels\MyItemsCoffeePageViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesktopApp.ViewModels.PopularCoffeeHousesViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAgAAAgAAAAAAAABAAggASAAA=</HashCode>
+      <FileName>ViewModels\PopularCoffeeHousesViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesktopApp.ViewModels.RegWindowCoffeeHouseViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAgBAAIAAQAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\RegWindowCoffeeHouseViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesktopApp.ViewModels.StatisticControllViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\StatisticControllViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesktopApp.Views.AboutDevelopersPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\AboutDevelopersPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesktopApp.Views.AddCoffeeHouse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAEAAEAAABAAAAAAAAICAAA=</HashCode>
+      <FileName>Views\AddCoffeeHouse.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesktopApp.Views.CoffeeKeyValue" Collapsed="true">
+    <Position X="3" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Views\AdminStatistics.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesktopApp.Views.AdminStatistics" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACCAAQQAAAAAAAAAAAAAQABA=</HashCode>
+      <FileName>Views\AdminStatistics.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesktopApp.Views.CoffeeHouseMainWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIABFAEAIBIIAAAAAAAAAAAAAAEAAAAAAAAIAAAA=</HashCode>
+      <FileName>Views\CoffeeHouseMainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesktopApp.Views.CoffeeHousesView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAIQAAAAAAAEAABAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Views\CoffeeHousesView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesktopApp.Views.Dashboard" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIgCEAAABBIIBAAAAAAAAIAAgAAAAgAAYAAIAAEA=</HashCode>
+      <FileName>Views\Dashboard.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesktopApp.Views.FavoriteCoffeeHouses" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Views\FavoriteCoffeeHouses.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesktopApp.Views.MapPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Views\MapPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesktopApp.Views.MyCoffeeHousesPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAE=</HashCode>
+      <FileName>Views\MyCoffeeHousesPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesktopApp.Views.MyItemsCoffeePage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Views\MyItemsCoffeePage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesktopApp.Views.PopularCoffeeHouses" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Views\PopularCoffeeHouses.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesktopApp.Views.RegWindowCoffeeHouse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAIAAAEAAAEEAAAAAAAAAAAAEAAMAAAA=</HashCode>
+      <FileName>Views\RegWindowCoffeeHouse.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesktopApp.Views.StatisticControll" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\StatisticControll.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesktopApp.Views.UserStatistics" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAwAAAAAAAAAAAAIAAABA=</HashCode>
+      <FileName>Views\UserStatistics.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesktopApp.App" Collapsed="true">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEACAABAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesktopApp.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAJAIAAAEAAAAQAEAAAAAIAAAAEAQMAAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="DesktopApp.Interfaces.IAppUserService" Collapsed="true">
+    <Position X="3" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAgAgAACAAAAAAAAIIAAAAA=</HashCode>
+      <FileName>Interfaces\IAppUserService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DesktopApp.Interfaces.ICoffeeHouseService" Collapsed="true">
+    <Position X="4.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAkAAAAQAAAAAAAAIAAAAAE=</HashCode>
+      <FileName>Interfaces\ICoffeeHouseService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DesktopApp.Interfaces.IFavoriteService" Collapsed="true">
+    <Position X="6.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAACAAgAAAAAAAAQAAAA=</HashCode>
+      <FileName>Interfaces\IFavoriteService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
