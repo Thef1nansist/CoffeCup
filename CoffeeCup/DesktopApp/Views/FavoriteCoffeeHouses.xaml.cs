@@ -19,9 +19,6 @@ using System.Windows.Shapes;
 
 namespace DesktopApp.Views
 {
-    /// <summary>
-    /// Логика взаимодействия для FavoriteCoffeeHouses.xaml
-    /// </summary>
     public partial class FavoriteCoffeeHouses : Page
     {
         private readonly IAppUserService _appUserService;

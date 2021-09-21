@@ -24,9 +24,6 @@ namespace DesktopApp.Views
         public string Name;
         public int Value;
     }
-    /// <summary>
-    /// Логика взаимодействия для AdminStatistics.xaml
-    /// </summary>
     public partial class AdminStatistics : Page
     {
         private IEnumerable<CoffeeHouse> coffeeHouses;

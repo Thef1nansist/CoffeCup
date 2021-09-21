@@ -2,11 +2,7 @@
 using BusinessLogic.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace CoffeeHouseApi.Controllers
 {
@@ -19,29 +15,14 @@ namespace CoffeeHouseApi.Controllers
         {
             _userService = appUserService;
         }
-        // GET: api/<UsersController>
+
         [HttpGet]
-        public async Task<IActionResult> Get()
-        {
-            var result = await _userService
-                .Get()
-                .ConfigureAwait(false);
+        public async Task<IActionResult> Get() => Ok(await _userService.Get());
 
-            return Ok(result);
-        }
-
-        // GET api/<UsersController>/5
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(string id)
-        {
-            var result = await _userService
-                .FindByIdAsync(id)
-                .ConfigureAwait(false);
+        public async Task<IActionResult> Get(string id) => 
+            Ok(await _userService.FindByIdAsync(id));
 
-            return Ok(result);
-        }
-
-        // POST api/<UsersController>
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] AppUser user)
         {
@@ -73,16 +54,6 @@ namespace CoffeeHouseApi.Controllers
                 return BadRequest(e.Message);
             }
         }
-        // PUT api/<UsersController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
 
-        // DELETE api/<UsersController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
 }

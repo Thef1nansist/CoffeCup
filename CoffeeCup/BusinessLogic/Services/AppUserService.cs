@@ -55,16 +55,10 @@ namespace BusinessLogic.Services
                     new Claim(JwtRegisteredClaimNames.Sub, userDA?.Id)
                 }).ConfigureAwait(false);
                 }
-
             }
-
             return result;
         }
-
-        public bool GetFlag()
-        {
-            return flag;
-        }
+        public bool GetFlag() => flag;
 
         public string CreateToken(IEnumerable<Claim> claims)
         {
@@ -104,18 +98,12 @@ namespace BusinessLogic.Services
         }
         public async Task<(string, string, bool)> LoginAsync(AppUser user, string password)
         {
-            //find user
             var existUser = await _userManager.FindByNameAsync(user?.UserName).ConfigureAwait(false);
 
-            //check pair user - password
             var checkUserPassword = await _userManager.CheckPasswordAsync(existUser, password).ConfigureAwait(false);
             if (existUser != null && checkUserPassword == true)
             {
-                //generates user claims
                 var claims = await _userManager.GetClaimsAsync(existUser).ConfigureAwait(false);
-                //create JWT
-
-
                 return (CreateToken(claims), existUser.Id, existUser.IsAdmin);
             }
             return (null, null, false);

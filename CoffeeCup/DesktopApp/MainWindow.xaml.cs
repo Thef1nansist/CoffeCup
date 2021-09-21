@@ -3,21 +3,15 @@ using DesktopApp.Interfaces;
 using DesktopApp.Models;
 using DesktopApp.ViewModels;
 using DesktopApp.Views;
-using Microsoft.Extensions.Configuration;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Navigation;
 
 namespace DesktopApp
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         private readonly IAppUserService _userService;
@@ -95,7 +89,6 @@ namespace DesktopApp
             }
 
         }
-
         private bool ValidationLog(string str)
         {
             string patternW = @"\w+";
@@ -105,7 +98,6 @@ namespace DesktopApp
             }
             return true;
         }
-
         private void RegPage_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             var regWindow = new RegWindowCoffeeHouse(_userService, _coffeeHouseService,_favoriteService);

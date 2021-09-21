@@ -78,9 +78,9 @@ namespace DesktopApp.Services
             return res.Result;
         }
 
-        public async Task<bool> GetSameFavoritesCoffeeHouses(string userId, int CoffeeHouseId)
+        public async Task<bool> GetSameFavoritesCoffeeHouses(int CoffeeHouseId)
         {
-            var request = new HttpRequestMessage(HttpMethod.Get, $"/api/favorites/{userId}/{CoffeeHouseId}");
+            var request = new HttpRequestMessage(HttpMethod.Get, $"/api/favorites/{_appUserService.UserId}/{CoffeeHouseId}");
 
             using var client = _httpClientFactory.CreateClient("CoffeeHouseApi");
             request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", _appUserService.JWT);
@@ -90,7 +90,6 @@ namespace DesktopApp.Services
             await using var responseStream = await response.Content.ReadAsStreamAsync();
 
             var res = await JsonSerializer.DeserializeAsync<bool>(responseStream);
-
 
             return res;
         }

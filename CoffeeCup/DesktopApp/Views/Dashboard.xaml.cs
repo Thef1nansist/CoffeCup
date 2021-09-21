@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace DesktopApp.Views
 {
-    /// <summary>
-    /// Interaction logic for Dashboard.xaml
-    /// </summary>
     public partial class Dashboard : Window
     {
         private readonly ICoffeeHouseService _coffeeHouseService;
@@ -57,38 +54,31 @@ namespace DesktopApp.Views
             MainFrame.NavigationUIVisibility = System.Windows.Navigation.NavigationUIVisibility.Hidden;
             MainFrame.Content = pageToLoad;
         }
-
-
         private void Image_MouseDown_2(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
         }
-
         private void Grid_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             this.DragMove();
 
         }
-
         private void StackPanel_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             AboutDevelopersPage aboutDevelopersPage = new AboutDevelopersPage();
             LoadWindowNew(aboutDevelopersPage);
         }
-
         private async void ListViewItem_MouseEnter_3(object sender, MouseButtonEventArgs e)
         {
             var userStatistics = new UserStatistics(_favoriteService);
             LoadWindowNew(userStatistics);
         }
-
         private void StackPanel_MouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
         {
             MapPage mapPage = new MapPage(_coffeeHouseService);
             LoadWindowNew(mapPage);
 
         }
-
         private void StackPanel_MouseLeftButtonDown_2(object sender, MouseButtonEventArgs e)
         {
             MyItemsCoffeePage myItemsCoffeePage = new MyItemsCoffeePage(_coffeeHouseService, _appUserService);

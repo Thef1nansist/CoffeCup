@@ -35,8 +35,8 @@ namespace DesktopApp.Services
             using var client = _httpClientFactory.CreateClient("CoffeeHouseApi");
 
             var response = await client.SendAsync(request);
+
             return response.StatusCode == System.Net.HttpStatusCode.OK;
-           
         }
 
         public async Task<IEnumerable<AppUser>> GetAsync()
@@ -53,8 +53,7 @@ namespace DesktopApp.Services
             {
                 PropertyNameCaseInsensitive = true
             });
-
-            return res;           
+            return res;         
         }
 
         public async Task<(bool, bool)> LoginAsync(string text, string password)
@@ -75,11 +74,7 @@ namespace DesktopApp.Services
             return (JWT != null, IsAdmin);
         }
 
-        public bool GetFlag()
-        {
-            return true;
-            
-        }
+        public bool GetFlag() => true;
     }
 
 }

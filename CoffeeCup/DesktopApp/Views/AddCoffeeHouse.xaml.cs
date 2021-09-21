@@ -19,13 +19,11 @@ using System.IO;
 
 namespace DesktopApp.Views
 {
-    /// <summary>
-    /// Логика взаимодействия для AddCoffeeHouse.xaml
-    /// </summary>
     public partial class AddCoffeeHouse : Page
     {
         private readonly ICoffeeHouseService _coffeeHouseService;
         private readonly IAppUserService _appUserService;
+        private string img_path;
         public AddCoffeeHouse(ICoffeeHouseService coffeeHouseService, IAppUserService appUserService)
         {
             InitializeComponent();
@@ -70,7 +68,6 @@ namespace DesktopApp.Views
                 return;
             }
 
-
             await _coffeeHouseService.AddAsync(new Models.CoffeeHouse()
             {
                 CreatorId = _appUserService.UserId,
@@ -110,10 +107,9 @@ namespace DesktopApp.Views
                         Name = CoffeeItem_4_Copy3.Text,
                         Price = Decimal.Parse(Price_CoffeeItem_4_Copy3.Text)
                     }
-
                 }
             });
-            ; ;
+
             MessageBox.Show("Готово");
 
             this.Content = null;
@@ -154,17 +150,10 @@ namespace DesktopApp.Views
             }
             return true;
         }
-        private void CoffeeItem_2_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private string img_path;
         private void ToggleButton_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-
                 var openFileDialog = new OpenFileDialog();
 
                 openFileDialog.Title = "Select a picture";

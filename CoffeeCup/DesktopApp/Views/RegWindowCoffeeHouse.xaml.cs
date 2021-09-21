@@ -1,27 +1,13 @@
 ﻿using DesktopApp.Interfaces;
 using DesktopApp.Models;
 using DesktopApp.ViewModels;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace DesktopApp.Views
 {
-    /// <summary>
-    /// Логика взаимодействия для RegWindowCoffeeHouse.xaml
-    /// </summary>
     public partial class RegWindowCoffeeHouse : Window
     {
         private readonly IAppUserService _userService;
@@ -36,7 +22,6 @@ namespace DesktopApp.Views
             DataContext = new RegWindowCoffeeHouseViewModel();
             _favoriteService = favoriteService;
         }
-
         private async void InitData(object sender, System.EventArgs e)
         {
             var users = await _userService.GetAsync();
@@ -45,7 +30,6 @@ namespace DesktopApp.Views
 
             dataContext.AppUsers = new ObservableCollection<AppUser>(users);
         }
-
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
 
@@ -67,14 +51,12 @@ namespace DesktopApp.Views
             }
 
         }
-
         private void Label_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             var mainwindow = new MainWindow(_userService, _coffeeHouseService, _favoriteService);
             mainwindow.Show();
             this.Close();
         }
-
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();

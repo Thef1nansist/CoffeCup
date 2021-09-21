@@ -32,9 +32,6 @@ namespace DesktopApp.ViewModels
                 OnPropertyChanged(nameof(CoffeeHouses));
             }
         }
-
-        
-
         public PopularCoffeeHousesViewModel()
         {
             NextPage = new NextPagePopularHousesCommand(this);

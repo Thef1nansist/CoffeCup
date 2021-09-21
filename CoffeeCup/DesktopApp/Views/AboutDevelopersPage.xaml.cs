@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace DesktopApp.Views
 {
-    /// <summary>
-    /// Логика взаимодействия для AboutDevelopersPage.xaml
-    /// </summary>
     public partial class AboutDevelopersPage : Page
     {
         public AboutDevelopersPage()

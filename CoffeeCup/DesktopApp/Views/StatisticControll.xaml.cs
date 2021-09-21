@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace DesktopApp.Views
 {
-    /// <summary>
-    /// Логика взаимодействия для StatisticControll.xaml
-    /// </summary>
     public partial class StatisticControll : UserControl
     {
         public StatisticControll()

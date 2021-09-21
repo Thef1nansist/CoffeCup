@@ -12,7 +12,6 @@ namespace DesktopApp.Interfaces
         Task<bool> CreateFavoriteCoffeeHouse(AddFavoriteCoffeeHouse addModel);
         Task<IEnumerable<FavoriteCoffeeHouse>> GetFavoriteCoffeeHouses();
         IEnumerable<OrderedCoffee> GetOrderedCoffee();
-
-        Task<bool> GetSameFavoritesCoffeeHouses(string userId, int CoffeeHouseId);
+        Task<bool> GetSameFavoritesCoffeeHouses(int CoffeeHouseId);
     }
 }

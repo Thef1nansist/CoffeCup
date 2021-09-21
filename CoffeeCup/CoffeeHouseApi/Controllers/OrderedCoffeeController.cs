@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 
 namespace CoffeeHouseApi.Controllers
 {
-    // matanit routing web api
     [Route("api/[controller]/")]
     [ApiController]
     public class OrderedCoffeeController : ControllerBase
@@ -21,10 +20,8 @@ namespace CoffeeHouseApi.Controllers
         }
         [HttpGet]
         [Authorize]
-        public IActionResult Get([FromQuery] string userId)
-        {
-            var result = _favoriteService.GetOrderedCoffee(userId);
-            return Ok(result);
-        }
+        public async Task<IActionResult> Get([FromQuery] string userId) => 
+            Ok(await _favoriteService.GetOrderedCoffee(userId));
+ 
     }
 }

@@ -136,7 +136,6 @@ namespace DesktopApp.Services
             request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", _appUserService.JWT);
 
             await client.SendAsync(request);
-
         }
 
     }

@@ -14,8 +14,6 @@ namespace DesktopApp.ViewModels
     {
         private AppUser selectedAppUser;
         private ObservableCollection<AppUser> appUsers;
-
-
         public ObservableCollection<AppUser> AppUsers
         {
             get { return appUsers; }
@@ -25,7 +23,6 @@ namespace DesktopApp.ViewModels
                 OnPropertyChanged(nameof(AppUsers));
             }
         }
-
         public AppUser SelectedAppUser
         {
             get { return selectedAppUser; }

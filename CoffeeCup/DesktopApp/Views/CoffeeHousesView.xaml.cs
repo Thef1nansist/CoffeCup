@@ -19,9 +19,6 @@ using System.Windows.Shapes;
 
 namespace DesktopApp.Views
 {
-    /// <summary>
-    /// Логика взаимодействия для CoffeeHousesView.xaml
-    /// </summary>
     public partial class CoffeeHousesView : Page
     {
         private readonly ICoffeeHouseService _coffeeHouseService;
@@ -35,7 +32,6 @@ namespace DesktopApp.Views
             InitializeComponent();
             DataContext = new CoffeeHouseViewModel();
         }
-
         private async void GetCoffeeHouses(object sender, System.EventArgs e)
         {
             var coffeeHouses = await _coffeeHouseService.GetAsync();
@@ -44,7 +40,6 @@ namespace DesktopApp.Views
             dataContext.CoffeeHouses = new ObservableCollection<CoffeeHouse>(coffeeHouses);
             listOfCoffeeHouses.ItemsSource = dataContext.CoffeeHouses;
         }
-
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             var context = (CoffeeHouseViewModel)DataContext;
@@ -55,8 +50,7 @@ namespace DesktopApp.Views
                 return;
             }    
 
-
-            if (await _favoriteService.GetSameFavoritesCoffeeHouses(_appUserService.UserId, context.SelectedCoffeeHouse.Id))
+            if (await _favoriteService.GetSameFavoritesCoffeeHouses(context.SelectedCoffeeHouse.Id))
                 return;
 
             await _favoriteService

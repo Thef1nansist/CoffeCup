@@ -11,10 +11,7 @@ namespace BusinessLogic.Configs
             services.AddScoped(typeof(IAppUserService), typeof(AppUserService));
             services.AddScoped(typeof(ICoffeeHouseService), typeof(CoffeeHouseService));
             services.AddScoped(typeof(IFavoriteService), typeof(FavoriteService));
-
-
             services.AddAutoMapper(typeof(BusinessProfileMappingProfile));
-
 
             return services;
         }

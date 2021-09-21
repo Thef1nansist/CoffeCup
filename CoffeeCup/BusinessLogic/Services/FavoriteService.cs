@@ -44,9 +44,7 @@ namespace BusinessLogic.Services
                 Debug.WriteLine(e);
                 throw;
             }
-
         }
-
         public async Task<Favorite> UpdateAsync(Favorite item)
         {
             using var context = _contextFactory.CreateDbContext();
@@ -64,7 +62,6 @@ namespace BusinessLogic.Services
 
             return _mapper.Map<Favorite>(entity);
         }
-
         public async Task<Favorite> GetByIdAsync(int id)
         {
             using var context = _contextFactory.CreateDbContext();
@@ -100,7 +97,6 @@ namespace BusinessLogic.Services
 
             return _mapper.Map<IEnumerable<Favorite>>(entities);
         }
-
         public async Task<IEnumerable<Favorite>> GetAll(string userId)
         {
             using var context = _contextFactory.CreateDbContext();
@@ -114,19 +110,16 @@ namespace BusinessLogic.Services
 
             return _mapper.Map<IEnumerable<Favorite>>(entities);
         }
-       
-        public IEnumerable<Infrastructure.Models.OrderedCoffee> GetOrderedCoffee(string userId)
+        public async Task<IEnumerable<Infrastructure.Models.OrderedCoffee>> GetOrderedCoffee(string userId)
         {
             using var context = _contextFactory.CreateDbContext();
-            var items = context.OrderedCoffees
+            var items = await context.OrderedCoffees
                 .Include(x => x.Coffee)
                 .Where(x => x.UserId == userId)
                 .OrderBy(x => x.Id)
-                .ToList();
-
+                .ToListAsync();
             return items;
         }
-
         public async Task<bool> GetSameFavoritesCoffeeHouses(string userId, int CoffeeHouseId)
         {
             using var context = _contextFactory.CreateDbContext();

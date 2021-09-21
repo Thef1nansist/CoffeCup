@@ -18,21 +18,13 @@ namespace CoffeeHouseApi.Controllers
         {
             _coffeeHouseService = coffeeHouseService;
         }
-        // GET: api/<CoffeeItemsController>
+
         [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
-        // GET api/<CoffeeItemsController>/5
+        public IEnumerable<string> Get() => new string[] { "value1", "value2" };
+     
         [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
+        public string Get(int id) =>  "value";
 
-        // POST api/<CoffeeItemsController>
         [HttpPost]
         public void Post([FromBody] string value)
         {
@@ -44,7 +36,6 @@ namespace CoffeeHouseApi.Controllers
             return Ok();
         }
 
-        // DELETE api/<CoffeeItemsController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

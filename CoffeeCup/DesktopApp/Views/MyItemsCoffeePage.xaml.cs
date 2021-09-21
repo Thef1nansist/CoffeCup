@@ -19,9 +19,6 @@ using System.Windows.Shapes;
 
 namespace DesktopApp.Views
 {
-    /// <summary>
-    /// Логика взаимодействия для MyItemsCoffeePage.xaml
-    /// </summary>
     public partial class MyItemsCoffeePage : Page
     {
         private readonly ICoffeeHouseService _coffeeHouseService;
@@ -34,10 +31,8 @@ namespace DesktopApp.Views
             InitializeComponent();
             DataContext = new MyItemsCoffeePageViewModel();
         }
-
         private async void GetCoffeeItemByUserAsync(object sender, System.EventArgs e)
         {
-
             var coffeeItems = await _coffeeHouseService.GetCoffeeItemByUserAsync(_appUserService.UserId);
             var dataContext = (MyItemsCoffeePageViewModel)DataContext;
 

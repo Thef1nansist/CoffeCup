@@ -12,7 +12,7 @@ namespace BusinessLogic.Interfaces
         Task<Favorite> GetByIdAsync(int id);
         Task<IEnumerable<Favorite>> GetByUserId(string userId);
         Task<Favorite> UpdateAsync(Favorite item);
-        IEnumerable<Infrastructure.Models.OrderedCoffee> GetOrderedCoffee(string userId);
+        Task<IEnumerable<Infrastructure.Models.OrderedCoffee>> GetOrderedCoffee(string userId);
 
         Task<bool> GetSameFavoritesCoffeeHouses(string userId, int CoffeeHouseId);
     }

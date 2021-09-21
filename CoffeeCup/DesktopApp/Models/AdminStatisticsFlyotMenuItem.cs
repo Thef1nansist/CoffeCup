@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesktopApp.Models
 {
-    public class AdminStatisticsFlyotMenuItem
+   public class AdminStatisticsFlyotMenuItem
     {
         public AdminStatisticsFlyotMenuItem()
         {

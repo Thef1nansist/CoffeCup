@@ -22,8 +22,6 @@ namespace BusinessLogic.Services
             _contextFactory = contextFactory;
             _mapper = mapper;
         }
-
-
         public async Task<CoffeeHouse> AddAsync(CoffeeHouse item)
         {
             try

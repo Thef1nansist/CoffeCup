@@ -24,9 +24,6 @@ using Microsoft.Maps.MapControl.WPF;
 
 namespace DesktopApp.Views
 {
-    /// <summary>
-    /// Логика взаимодействия для MapPage.xaml
-    /// </summary>
     public partial class MapPage : System.Windows.Controls.Page
     {
         private readonly ICoffeeHouseService _coffeeHouseService;
@@ -36,7 +33,6 @@ namespace DesktopApp.Views
             InitializeComponent();
             DataContext = new CoffeeHouseViewModel();
         }
-
         private async void GetCoffeeHouses(object sender, System.EventArgs e)
         {
             var coffeehouses = await _coffeeHouseService.GetAsync();
@@ -45,12 +41,10 @@ namespace DesktopApp.Views
             listOfCoffeeHouses.ItemsSource = datacontext.CoffeeHouses;
 
         }
-
         private void StackPanel_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             try
             {
-
                 listOfCoffeeHouses.IsEnabled = false;
                 //string externalIpString = new WebClient().DownloadString("http://icanhazip.com").Replace("\\r\\n", "").Replace("\\n", "").Trim();
 
@@ -78,13 +72,11 @@ namespace DesktopApp.Views
                 MyMap.SetView(location, 20);
                 canvasMarker.SetValue(MapLayer.PositionProperty, location);
 
-
                 response.Close();
                 listOfCoffeeHouses.IsEnabled = true;
             }
             catch (Exception)
             {
-
                 MessageBox.Show("Карта обновляется, зайдите позже");
                 listOfCoffeeHouses.IsEnabled = true;
             }
